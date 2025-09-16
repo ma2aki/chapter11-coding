@@ -1,0 +1,50 @@
+@use "global" as *;
+
+.c-form-buttons {
+  font-size: myrem(16);
+  padding-top: myrem(13);
+  padding-left: myrem(15);
+  padding-bottom: myrem(13);
+  background-color: #f4f4f4;
+  cursor: pointer;
+  border-radius: 8px;
+  width: calc(100% / 2 - 8px);
+  @include mq(md) {
+    font-size: myrem(14);
+    padding-top: myrem(8);
+    padding-left: myrem(20);
+    padding-bottom: myrem(7);
+    background-color: #f4f4f4;
+    cursor: pointer;
+    border-radius: 8px;
+    width: calc(100% / 4 - 20px);
+    letter-spacing: calc(100 / 1000) * myrem(14);
+    transition: 0.6s;
+  }
+}
+.c-form-buttons:hover {
+  @include mq(md) {
+    opacity: 0.9;
+    transition: 0.4s;
+    color: $white;
+    background-color: $blue;
+  }
+}
+
+.c-form-buttons:nth-of-type(3) {
+  @include mq(md) {
+    margin-left: myrem(-3);
+  }
+}
+
+.c-form-buttons:nth-of-type(7) {
+  @include mq(md) {
+    margin-left: myrem(-3);
+  }
+}
+
+.selected {
+  background-color: $blue; /* 選択されたときの色 */
+  transition: 0.5s;
+  color: white;
+}

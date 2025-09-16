@@ -1,0 +1,171 @@
+@use "global" as *;
+
+input[type="radio"] {
+  position: relative;
+  left: myrem(-7);
+  top: myrem(1);
+  width: 35px;
+  height: 35px;
+  border: 1px solid #000;
+  border-radius: 50%;
+  vertical-align: 1px;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  cursor: pointer;
+  @include mq(md) {
+    inline-size: 35px;
+    block-size: 36px;
+    margin: 0;
+    position: relative;
+    left: 0;
+  }
+}
+
+input[type="radio"]:checked {
+  border: 1px solid #a4dde0;
+  transition: 0.3s;
+  @include mq(md) {
+  }
+}
+input[type="radio"]:checked:before {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: myrem(21);
+  height: myrem(21);
+  border-radius: 50%;
+  background: #a4dde0;
+  content: "";
+  transition: 0.3s;
+  @include mq(md) {
+    margin: 0;
+  }
+}
+
+input[type="radio"]:nth-of-type(2) {
+  inline-size: 35px;
+  block-size: 36px;
+  margin: 0;
+  margin-left: myrem(40);
+  transition: 0.3s;
+  @include mq(md) {
+    inline-size: 35px;
+    block-size: 36px;
+    margin: 0;
+    margin-left: myrem(42.7);
+  }
+}
+
+input[type="radio"]:nth-of-type(3) {
+  inline-size: 35px;
+  block-size: 36px;
+  margin: 0;
+  margin-left: myrem(42.7);
+  transition: 0.3s;
+  @include mq(md) {
+    inline-size: 35px;
+    block-size: 36px;
+    margin: 0;
+    margin-left: myrem(42.7);
+  }
+}
+
+input[value="visit"] {
+  @include mq(md) {
+    inline-size: 35px;
+    block-size: 36px;
+    margin: 0;
+  }
+}
+
+input[value="visit"]:nth-of-type(1) {
+  left: myrem(-5);
+  top: 0;
+  @include mq(md) {
+    left: 0;
+    top: myrem(2);
+  }
+}
+input[value="visit"]:nth-of-type(2) {
+  left: myrem(-21);
+  @include mq(md) {
+    left: myrem(-15);
+    top: myrem(1);
+  }
+}
+
+label[for="male"] {
+  letter-spacing: calc(100 / 1000) * myrem(14);
+  font-size: myrem(14);
+  position: relative;
+  top: myrem(-11);
+  @include mq(md) {
+    font-size: myrem(14);
+    position: relative;
+    top: myrem(-11);
+    left: myrem(12);
+    letter-spacing: calc(100 / 1000) * myrem(14);
+  }
+}
+
+label[for="female"] {
+  font-size: myrem(14);
+  position: relative;
+  top: myrem(-11);
+  left: myrem(3);
+  letter-spacing: calc(100 / 1000) * myrem(14);
+  @include mq(md) {
+    font-size: myrem(14);
+    position: relative;
+    top: myrem(-11);
+    left: myrem(12);
+    letter-spacing: calc(100 / 1000) * myrem(14);
+  }
+}
+
+label[for="other"] {
+  font-size: myrem(14);
+  position: relative;
+  top: myrem(-11);
+  left: myrem(5);
+  letter-spacing: calc(100 / 1000) * myrem(14);
+  @include mq(md) {
+    font-size: myrem(14);
+    position: relative;
+    top: myrem(-11);
+    left: myrem(15);
+    letter-spacing: calc(100 / 1000) * myrem(14);
+  }
+}
+
+label[for="firstTime"] {
+  font-size: myrem(14);
+  position: relative;
+  top: myrem(-12);
+  left: myrem(2);
+  letter-spacing: calc(100 / 1000) * myrem(14);
+  @include mq(md) {
+    font-size: myrem(14);
+    position: relative;
+    top: myrem(-11);
+    left: myrem(12);
+    letter-spacing: calc(100 / 1000) * myrem(14);
+  }
+}
+
+label[for="secondTimes"] {
+  font-size: myrem(14);
+  position: relative;
+  top: myrem(-12);
+  left: myrem(-9);
+  letter-spacing: calc(100 / 1000) * myrem(14);
+  @include mq(md) {
+    font-size: myrem(14);
+    position: relative;
+    top: myrem(-11);
+    left: myrem(-3);
+    letter-spacing: calc(100 / 1000) * myrem(14);
+  }
+}

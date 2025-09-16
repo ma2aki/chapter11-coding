@@ -1,0 +1,15 @@
+@use "global" as *;
+
+.c-hamburger-list-item {
+  @include mq(md) {
+    letter-spacing: calc(100 / 1000) * myrem(16);
+    font-size: myrem(16);
+  }
+}
+
+.c-hamburger-list-item:hover {
+  @include mq(md) {
+    color: #7bd1d5;
+    font-weight: bold;
+  }
+}

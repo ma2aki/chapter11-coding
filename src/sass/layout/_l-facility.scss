@@ -1,0 +1,16 @@
+@use "global" as *;
+
+.l-facility {
+  padding-top: myrem(60);
+  padding-bottom: myrem(80);
+  background-image: url(../../images/facility背景画像.webp);
+  background-size: 70% 100%;
+  background-position: left;
+  background-repeat: no-repeat;
+  @include mq(md) {
+    padding-bottom: myrem(70);
+    padding-top: myrem(70);
+    background-size: 64% 100%;
+    margin-top: myrem(110);
+  }
+}

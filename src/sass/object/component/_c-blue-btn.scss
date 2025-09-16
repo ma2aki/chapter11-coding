@@ -1,0 +1,226 @@
+@use "global" as *;
+
+.c-blue-btn {
+  margin: 0 auto;
+  font-size: myrem(14);
+  display: block;
+  padding-left: myrem(76);
+  padding-right: myrem(72);
+  padding-top: myrem(13);
+  padding-bottom: myrem(13);
+  cursor: pointer;
+  user-select: none;
+  width: fit-content;
+  transition: all 0.3s;
+  text-align: center;
+  text-decoration: none;
+  border: 2px solid $blue;
+  border-radius: 25px;
+  color: $blue;
+  background: $white;
+  position: relative;
+  overflow: hidden;
+  letter-spacing: calc(100 / 1000) * myrem(14);
+  @include mq(md) {
+    font-size: myrem(16);
+    letter-spacing: calc(100 / 1000) * myrem(14);
+    margin: 0;
+    @include l_height(14, 20);
+    padding: 0;
+    padding-right: myrem(71);
+    padding-left: myrem(71);
+    padding-top: myrem(12);
+    padding-bottom: myrem(13);
+    border: 1px solid $blue;
+    font-weight: 600;
+  }
+}
+
+.c-blue-btn::before {
+  /* 背景色 */
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: scaleX(0);
+  transform-origin: right;
+  width: 100%;
+  height: 100%;
+  background-color: $blue;
+  transition: transform 0.3s;
+  z-index: -1;
+  @include mq(md) {
+  }
+}
+
+.c-blue-btn:hover::before {
+  @include mq(md) {
+    transform: scaleX(1); /* 0→1でX軸方向に100%変形 */
+    transform-origin: left;
+  }
+}
+
+.c-blue-btn:hover {
+  @include mq(md) {
+    color: $white;
+    opacity: 0.9;
+  }
+}
+
+.c-blue-btn:hover::before {
+  @include mq(md) {
+    transform: scaleX(1); /* 0→1でX軸方向に100%変形 */
+    transform-origin: bottom left;
+  }
+}
+
+.c-blue-btn span::before {
+  content: "";
+  position: absolute;
+  top: 58%;
+  right: 19.5px;
+  transform: translateY(-50%) rotate(45deg);
+  width: 1px;
+  height: 10px;
+  background-color: $blue;
+  border-radius: 1px;
+  @include mq(md) {
+  }
+}
+.c-blue-btn span::after {
+  content: "";
+  position: absolute;
+  top: 44%;
+  right: 15px;
+  transform: translateY(-50%) rotate(45deg);
+  width: 10px;
+  height: 1px;
+  background-color: $blue;
+  border-radius: 1px;
+  @include mq(md) {
+  }
+}
+
+.c-blue-btn:hover span::after {
+  @include mq(md) {
+    background-color: $white;
+  }
+}
+.c-blue-btn:hover span::before {
+  @include mq(md) {
+    background-color: $white;
+  }
+}
+
+.c-blue-btn--reverse {
+  display: inline-block;
+  font-size: myrem(14);
+  padding-left: myrem(76);
+  padding-right: myrem(72);
+  padding-top: myrem(13);
+  padding-bottom: myrem(13);
+  cursor: pointer;
+  user-select: none;
+  width: fit-content;
+  transition: all 0.3s;
+  text-align: center;
+  text-decoration: none;
+  border: 2px solid $blue;
+  border-radius: 25px;
+  color: $white;
+  background: $blue;
+  position: relative;
+  overflow: hidden;
+  letter-spacing: calc(100 / 1000) * myrem(14);
+  @include mq(md) {
+    font-size: myrem(16);
+    letter-spacing: calc(100 / 1000) * myrem(14);
+    margin: 0;
+    @include l_height(14, 20);
+    padding: 0;
+    padding-right: myrem(71);
+    padding-left: myrem(71);
+    padding-top: myrem(12);
+    padding-bottom: myrem(13);
+    border: 1px solid $white;
+    font-weight: 600;
+  }
+}
+
+.c-blue-btn--reverse::before {
+  /* 背景色 */
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: scaleX(0);
+  transform-origin: right;
+  width: 100%;
+  height: 100%;
+  background-color: $white;
+  transition: transform 0.3s;
+  z-index: -1;
+  @include mq(md) {
+  }
+}
+
+.c-blue-btn--reverse:hover::before {
+  @include mq(md) {
+    transform: scaleX(1); /* 0→1でX軸方向に100%変形 */
+    transform-origin: left;
+  }
+}
+
+.c-blue-btn--reverse:hover {
+  @include mq(md) {
+    color: $blue;
+    opacity: 0.9;
+    border: 1px solid $blue;
+  }
+}
+
+.c-blue-btn--reverse:hover::before {
+  @include mq(md) {
+    transform: scaleX(1); /* 0→1でX軸方向に100%変形 */
+    transform-origin: bottom left;
+  }
+}
+
+.c-blue-btn.c-blue-btn--reverse span::before {
+  content: "";
+  position: absolute;
+  top: 58%;
+  right: 19.5px;
+  transform: translateY(-50%) rotate(45deg);
+  width: 1px;
+  height: 10px;
+  background-color: $white;
+  border-radius: 1px;
+  @include mq(md) {
+  }
+}
+.c-blue-btn.c-blue-btn--reverse span::after {
+  content: "";
+  position: absolute;
+  top: 44%;
+  right: 15px;
+  transform: translateY(-50%) rotate(45deg);
+  width: 10px;
+  height: 1px;
+  background-color: $white;
+  border-radius: 1px;
+  @include mq(md) {
+  }
+}
+
+.c-blue-btn--reverse:hover span::before {
+  @include mq(md) {
+    background-color: $blue;
+  }
+}
+
+.c-blue-btn--reverse:hover span::after {
+  @include mq(md) {
+    background-color: $blue;
+  }
+}

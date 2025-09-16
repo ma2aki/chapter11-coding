@@ -1,0 +1,108 @@
+@use "global" as *;
+
+.p-anouns {
+  @include mq(md) {
+  }
+}
+
+.p-anouns__title {
+  @include mq(md) {
+  }
+}
+
+.p-anouns__maintitle {
+  margin-bottom: myrem(-3);
+  letter-spacing: calc(40 / 1000) * myrem(28);
+  @include mq(md) {
+    margin-bottom: 0;
+    margin-right: myrem(36);
+    letter-spacing: calc(100 / 1000) * myrem(36);
+  }
+}
+
+.p-anouns__subtitle {
+  color: $violet;
+  @include mq(md) {
+    color: $violet;
+    margin-top: myrem(-2);
+  }
+}
+
+.p-anouns__section-wrapper {
+  @include mq(md) {
+    display: flex;
+    text-align: left;
+    margin-top: myrem(94);
+    justify-content: flex-end;
+  }
+}
+
+.p-anouns__list {
+  margin-top: myrem(17);
+  @include mq(md) {
+    margin-top: 0;
+  }
+}
+
+.p-anouns__item-btn {
+  display: flex;
+  flex-wrap: wrap;
+  @include mq(md) {
+    display: flex;
+    padding: myrem(8);
+  }
+}
+
+.p-anouns__item {
+  @include mq(md) {
+  }
+}
+
+.p-anouns__item-date {
+  width: 100%;
+  @include mq(md) {
+    width: 14.3%;
+  }
+}
+
+.p-anouns__item-title {
+  width: 21%;
+  @include mq(md) {
+    width: 11.5%;
+  }
+}
+.p-anouns__item-text {
+  width: 72%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  -webkit-text-overflow: ellipsis;
+  -o-text-overflow: ellipsis;
+  @include mq(md) {
+    width: 40%;
+    white-space: nowrap;
+    overflow: hidden;
+    -webkit-text-overflow: ellipsis;
+    -o-text-overflow: ellipsis;
+  }
+}
+
+.p-anouns__item:nth-last-of-type(3) {
+  padding-bottom: myrem(9);
+  @include mq(md) {
+    padding-bottom: 0;
+  }
+}
+
+.p-anouns__btn {
+  @include mq(md) {
+    margin-bottom: myrem(35);
+    margin-top: myrem(15);
+    font-size: myrem(16);
+    display: block;
+    padding: myrem(5) myrem(10);
+    padding-right: myrem(23);
+    text-align: right;
+    position: relative;
+  }
+}

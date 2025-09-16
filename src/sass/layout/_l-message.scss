@@ -1,0 +1,16 @@
+@use "global" as *;
+
+.l-message {
+  position: relative;
+  padding-bottom: myrem(70);
+  background-image: url(../../images/message背景画像.webp);
+  background-position: left bottom;
+  background-repeat: no-repeat;
+  background-size: 70% 90%;
+  @include mq(md) {
+    margin-top: myrem(85);
+    background-size: myrem(895) myrem(1238);
+    padding-bottom: myrem(140);
+    background-size: 64% 85.7%;
+  }
+}

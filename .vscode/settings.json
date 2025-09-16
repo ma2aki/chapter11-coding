@@ -1,0 +1,39 @@
+{
+  "cSpell.words": [
+    "Aboutsection",
+    "anouns",
+    "bigtext",
+    "bookbtn",
+    "catchcopy",
+    "ddmenu",
+    "detailsection",
+    "disp",
+    "flocss",
+    "googlemap",
+    "inview",
+    "keyvisual",
+    "keyvisualimgsp",
+    "letterspacing",
+    "maintext",
+    "maintitle",
+    "myrem",
+    "pagetop",
+    "panlist",
+    "scrollstop",
+    "sendpage",
+    "titlecontainer",
+    "topcontainer",
+    "webreserve"
+  ],
+  "emmet.preferences": {
+    "selfClosingStyle": "html"
+  },
+  "beautify.config": {
+    "html": {
+      "end_with_newline": true,
+      "indent_inner_html": true,
+      "unformatted": ["img", "br", "hr"],
+      "self_closing_tag": false
+    }
+  }
+}

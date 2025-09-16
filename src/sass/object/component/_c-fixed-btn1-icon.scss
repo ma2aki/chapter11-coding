@@ -1,0 +1,10 @@
+@use "global" as *;
+
+.c-fixed-btn1-icon {
+  margin-left: myrem(21);
+  margin-right: myrem(7);
+  width: myrem(11.48);
+  height: myrem(15.74);
+  @include mq(md) {
+  }
+}

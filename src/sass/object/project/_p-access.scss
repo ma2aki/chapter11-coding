@@ -1,0 +1,395 @@
+@use "global" as *;
+
+.p-access {
+  @include mq(md) {
+  }
+}
+
+.p-access__title {
+  text-align: center;
+  @include mq(md) {
+  }
+}
+
+.p-access__maintitle {
+  margin-left: myrem(2);
+  @include mq(md) {
+    font-weight: normal;
+  }
+}
+
+.p-access__subtitle {
+  margin-left: myrem(2);
+  margin-top: myrem(3);
+  letter-spacing: calc(40 / 1000) * myrem(14);
+  @include mq(md) {
+    margin-left: 0;
+    margin-top: 0;
+    letter-spacing: calc(100 / 1000) * myrem(18);
+  }
+}
+
+.p-access__container-contents {
+  @include mq(md) {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+.p-access__googlemap-container {
+  position: relative;
+  margin-top: myrem(29);
+  width: 100%;
+  padding-top: 56.25%;
+  /* 16:9のアスペクト比 */
+  height: 0;
+  @include mq(md) {
+    margin-top: 0;
+  }
+}
+
+.p-access__googlemap-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 50px;
+  @include mq(md) {
+    margin-top: myrem(40);
+    width: myrem(1000);
+    height: myrem(499);
+  }
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.p-access__tel-number {
+  font-size: myrem(30);
+  margin: myrem(12) 0;
+  margin-bottom: myrem(11);
+  font-weight: bold;
+  @include mq(md) {
+    margin: myrem(20) 0;
+    margin-bottom: myrem(20);
+    font-size: myrem(35);
+    font-weight: bold;
+  }
+}
+
+@media (min-width: 768px) {
+  a[href*="tel:"] {
+    pointer-events: none;
+    cursor: default;
+    text-decoration: none;
+  }
+}
+
+.p-access__tel-link span {
+  font-size: myrem(19);
+  @include mq(md) {
+    font-size: myrem(22);
+    font-weight: bold;
+  }
+}
+
+.p-access__address,
+.p-access__time,
+.p-access__date {
+  font-size: myrem(12);
+  margin-bottom: myrem(5);
+  line-height: myrem(18.9);
+  @include mq(md) {
+    font-size: myrem(14);
+    margin-bottom: myrem(13);
+  }
+}
+
+.p-access__logo {
+  width: myrem(286);
+  margin-top: myrem(21);
+  margin-left: myrem(1);
+  @include mq(md) {
+    margin-top: myrem(37);
+    width: myrem(381);
+    margin-left: myrem(1);
+  }
+}
+
+.p-access__time-table {
+  border-bottom: 1px solid $black;
+  border-top: 1px solid $black;
+  border-spacing: 0;
+  width: 100%;
+  text-align: center;
+  font-size: myrem(14);
+  font-weight: 400;
+  margin-top: myrem(38);
+  @include mq(md) {
+    border-bottom: none;
+    font-size: myrem(16);
+    width: 50%;
+    max-width: initial;
+    margin-top: myrem(36);
+    text-align: left;
+  }
+}
+
+.p-access-time-table__row1 {
+  font-weight: 400;
+  display: flex;
+  padding-top: myrem(8);
+  padding-bottom: myrem(9);
+  margin-left: myrem(57);
+  justify-content: space-between;
+  @include mq(md) {
+    justify-content: initial;
+    margin-left: myrem(111);
+    padding-right: 0;
+    padding: myrem(5) 0;
+  }
+}
+
+.p-access-time-table__row1 p {
+  @include mq(md) {
+    margin-top: myrem(1);
+    letter-spacing: calc(100 / 1000) * myrem(16);
+  }
+}
+
+.p-access-time-table__row1 p:nth-of-type(8) {
+  margin-right: myrem(7);
+  @include mq(md) {
+    margin-right: myrem(19);
+  }
+}
+.p-access-time-table__row1 p:nth-of-type(7) {
+  margin-right: myrem(25);
+  @include mq(md) {
+    margin-right: myrem(35);
+  }
+}
+.p-access-time-table__row1 p:nth-of-type(6) {
+  margin-right: myrem(26);
+  @include mq(md) {
+    margin-right: myrem(36);
+  }
+}
+.p-access-time-table__row1 p:nth-of-type(5) {
+  margin-right: myrem(26);
+  @include mq(md) {
+    margin-right: myrem(35);
+  }
+}
+.p-access-time-table__row1 p:nth-of-type(4) {
+  margin-right: myrem(26);
+  @include mq(md) {
+    margin-right: myrem(35);
+  }
+}
+.p-access-time-table__row1 p:nth-of-type(3) {
+  margin-right: myrem(26);
+  @include mq(md) {
+    margin-right: myrem(35);
+  }
+}
+.p-access-time-table__row1 p:nth-of-type(2) {
+  margin-right: myrem(26);
+  @include mq(md) {
+    margin-right: myrem(35);
+  }
+}
+
+.p-access-time-table__row2 {
+  font-weight: 400;
+  border-top: 1px solid $black;
+  border-bottom: 1px solid $black;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: myrem(9);
+  padding-bottom: myrem(8);
+  font-size: myrem(16);
+  @include mq(md) {
+    justify-content: initial;
+    padding-right: 0;
+    padding: myrem(5) 0;
+  }
+}
+
+.p-access-time-table__row2 p:nth-of-type(1) {
+  margin-left: myrem(9);
+  line-height: 20px;
+  font-size: myrem(14);
+  letter-spacing: 0;
+  width: myrem(28);
+  @include mq(md) {
+    font-size: myrem(16);
+    white-space: nowrap;
+    margin-left: myrem(13);
+    padding-top: myrem(12);
+    padding-bottom: myrem(8);
+  }
+}
+.p-access-time-table__row2 p:nth-of-type(2) {
+  margin-right: myrem(10);
+  @include mq(md) {
+    margin-right: 0;
+    margin-left: myrem(70);
+    margin-top: myrem(3);
+  }
+}
+.p-access-time-table__row2 p:nth-of-type(3) {
+  margin-right: myrem(10);
+  @include mq(md) {
+    margin-right: 0;
+    margin-left: myrem(37);
+    margin-top: myrem(4);
+  }
+}
+.p-access-time-table__row2 p:nth-of-type(4) {
+  margin-right: myrem(10);
+  @include mq(md) {
+    margin-right: 0;
+    margin-left: myrem(37);
+    margin-top: myrem(4);
+  }
+}
+.p-access-time-table__row2 p:nth-of-type(5) {
+  margin-right: myrem(10);
+  @include mq(md) {
+    margin-right: 0;
+    margin-left: myrem(36);
+    margin-top: myrem(4);
+  }
+}
+.p-access-time-table__row2 p:nth-of-type(6) {
+  margin-right: myrem(10);
+  @include mq(md) {
+    margin-right: 0;
+    margin-left: myrem(37);
+    margin-top: myrem(4);
+  }
+}
+.p-access-time-table__row2 p:nth-of-type(7) {
+  margin-right: myrem(20);
+  @include mq(md) {
+    margin-right: 0;
+    margin-left: myrem(37);
+    margin-top: myrem(4);
+  }
+}
+.p-access-time-table__row2 p:nth-of-type(8) {
+  margin-right: myrem(20);
+  @include mq(md) {
+    margin-right: 0;
+    margin-left: myrem(54);
+    margin-top: myrem(4);
+  }
+}
+
+.p-access-time-table__row3 {
+  font-weight: 400;
+  justify-content: space-between;
+  display: flex;
+  align-items: center;
+  padding-top: myrem(9);
+  padding-bottom: myrem(8);
+  font-size: myrem(16);
+  @include mq(md) {
+    padding-right: 0;
+    padding-top: myrem(4);
+    padding-bottom: myrem(7);
+    border-bottom: 1px solid $black;
+    justify-content: initial;
+  }
+}
+
+.p-access-time-table__row3 p:nth-of-type(1) {
+  margin-left: myrem(9);
+  line-height: 20px;
+  font-size: myrem(14);
+  letter-spacing: 0;
+  width: myrem(28);
+  @include mq(md) {
+    font-size: myrem(16);
+    white-space: nowrap;
+    margin-left: myrem(13);
+    padding-top: myrem(12);
+    padding-bottom: myrem(8);
+  }
+}
+
+.p-access-time-table__row3 p:nth-of-type(2) {
+  margin-right: myrem(10);
+  @include mq(md) {
+    margin-right: 0;
+    margin-left: myrem(70);
+    margin-top: myrem(4);
+  }
+}
+.p-access-time-table__row3 p:nth-of-type(3) {
+  margin-right: myrem(10);
+  @include mq(md) {
+    margin-right: 0;
+    margin-left: myrem(37);
+    margin-top: myrem(4);
+  }
+}
+.p-access-time-table__row3 p:nth-of-type(4) {
+  margin-right: myrem(10);
+  @include mq(md) {
+    margin-right: 0;
+    margin-left: myrem(37);
+    margin-top: myrem(4);
+  }
+}
+.p-access-time-table__row3 p:nth-of-type(5) {
+  margin-right: myrem(10);
+  @include mq(md) {
+    margin-right: 0;
+    margin-left: myrem(36);
+    margin-top: myrem(4);
+  }
+}
+.p-access-time-table__row3 p:nth-of-type(6) {
+  margin-right: myrem(10);
+  @include mq(md) {
+    margin-right: 0;
+    margin-left: myrem(37);
+    margin-top: myrem(4);
+  }
+}
+.p-access-time-table__row3 p:nth-of-type(7) {
+  margin-right: myrem(20);
+  @include mq(md) {
+    margin-right: 0;
+    margin-left: myrem(37);
+    margin-top: myrem(4);
+  }
+}
+.p-access-time-table__row3 p:nth-of-type(8) {
+  margin-right: myrem(20);
+  @include mq(md) {
+    margin-right: myrem(0);
+    margin-left: myrem(54);
+    margin-top: myrem(4);
+  }
+}
+
+.p-access__btn {
+  margin-top: myrem(39);
+  letter-spacing: calc(100 / 1000) * myrem(14);
+  @include mq(md) {
+    margin: 0;
+    margin-top: myrem(37);
+    text-align: center;
+    position: relative;
+    left: 48.7%;
+    transform: translateX(-50%);
+  }
+}

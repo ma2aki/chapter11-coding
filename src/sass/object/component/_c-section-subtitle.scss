@@ -1,0 +1,22 @@
+@use "global" as *;
+
+.c-section-subtitle {
+  color: $blue;
+  @include l_height(14, 20);
+  letter-spacing: calc(100 / 1000) * myrem(14);
+  font-size: myrem(14);
+  @include mq(md) {
+    font-size: myrem(18);
+    letter-spacing: calc(100 / 1000) * myrem(18);
+    @include l_height(18, 26);
+  }
+}
+
+.c-section-subtitle--letterspacing {
+  letter-spacing: calc(40 / 1000) * myrem(14);
+  margin-right: myrem(3);
+  margin-top: myrem(2);
+  @include mq(md) {
+    margin: 0;
+  }
+}

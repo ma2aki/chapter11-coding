@@ -1,0 +1,76 @@
+@use "global" as *;
+
+.c-btn01 {
+  font-weight: bold;
+  display: block;
+  margin-top: myrem(8);
+  text-align: right;
+  font-size: myrem(14);
+  letter-spacing: calc(100 / 1000) * myrem(14);
+  transform: translateX(-26px);
+  position: relative;
+  @include mq(md) {
+    font-size: myrem(16);
+    letter-spacing: calc(100 / 1000) * 1rem;
+    transform: translateX(-30px);
+    margin-top: myrem(10);
+  }
+}
+
+.c-btn01 span::before {
+  content: "";
+  position: absolute;
+  top: 40%;
+  right: 5px;
+  background-color: $white;
+  transform: translateY(-50%) rotate(45deg);
+  width: 5px;
+  height: 1px;
+  border-radius: 1px 1px 1px 1px;
+  @include mq(md) {
+    right: 6px;
+  }
+}
+.c-btn01 span::after {
+  content: "";
+  position: absolute;
+  background-color: $white;
+  top: 59%;
+  right: 7px;
+  transform: translateY(-50%) rotate(45deg);
+  width: 1px;
+  height: 5px;
+  border-radius: 1px 1px 1px 1px;
+  @include mq(md) {
+    right: 8px;
+  }
+}
+
+.c-btn01 span {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: -25px;
+  transform: translateY(-50%);
+  width: 16px;
+  height: 16px;
+  background-color: $violet;
+  border-radius: 50vh;
+  @include mq(md) {
+    content: "";
+    position: absolute;
+    top: 53%;
+    right: -23px;
+    transform: translateY(-50%);
+    width: 18px;
+    height: 18px;
+    background-color: $violet;
+    border-radius: 50vh;
+  }
+}
+
+.c-btn01--violet {
+  color: $violet;
+  @include mq(md) {
+  }
+}

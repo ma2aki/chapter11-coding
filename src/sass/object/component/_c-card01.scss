@@ -1,0 +1,23 @@
+@use "global" as *;
+
+.c-card01 {
+  border-bottom: 1px solid $violet;
+  padding-top: myrem(6);
+  padding-bottom: myrem(10);
+  font-size: myrem(14);
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  letter-spacing: calc(30 / 1000) * myrem(14);
+  @include l_height(14, 20);
+  @include mq(md) {
+    padding-top: 0;
+    padding-bottom: 0;
+    margin-top: myrem(8);
+    width: myrem(623);
+    font-size: myrem(14);
+    letter-spacing: calc(30 / 1000) * myrem(14);
+    position: relative;
+    left: myrem(-7);
+  }
+}

@@ -1,0 +1,246 @@
+@use "global" as *;
+
+.p-form__container {
+  margin-top: myrem(76);
+  @include mq(md) {
+    width: myrem(896);
+    margin: 0 auto;
+  }
+}
+
+.p-form__wrapper {
+  background-color: $white;
+  border-radius: 20px 20px 0 0;
+  padding-top: myrem(25);
+  margin-left: myrem(15);
+  margin-right: myrem(15);
+  @include mq(md) {
+    margin: 0 auto;
+    margin-top: myrem(0);
+    padding-top: myrem(20);
+    z-index: 1;
+    position: relative;
+    background-color: $white;
+    width: myrem(1000);
+    border-radius: 20px 20px 0 0;
+  }
+}
+
+.p-form__title {
+  margin-bottom: myrem(50);
+  margin-top: myrem(7);
+  text-align: center;
+  @include mq(md) {
+    margin-top: myrem(35);
+    margin-bottom: myrem(39);
+    margin-left: myrem(2);
+    text-align: center;
+  }
+}
+
+.p-form__title h3 {
+  letter-spacing: calc(40 / 1000) * myrem(28);
+  @include mq(md) {
+    letter-spacing: calc(100 / 1000) * myrem(32);
+  }
+}
+
+.p-form__title p {
+  letter-spacing: calc(40 / 1000) * myrem(14);
+  @include mq(md) {
+    letter-spacing: calc(100 / 1000) * myrem(18);
+  }
+}
+
+.p-form__btn {
+  margin-top: myrem(32);
+  padding-left: myrem(86);
+  padding-right: myrem(87);
+  @include mq(md) {
+    margin: 0 auto;
+    margin-top: myrem(32);
+    padding-left: myrem(85);
+    padding-right: myrem(87);
+  }
+}
+
+.p-form__item-title {
+  display: block;
+  margin-bottom: myrem(19);
+  position: relative;
+  left: myrem(57);
+  letter-spacing: calc(100 / 1000) * myrem(16);
+  @include mq(md) {
+    margin-bottom: myrem(21);
+    font-size: myrem(16);
+    letter-spacing: calc(100 / 1000) * myrem(16);
+    position: relative;
+    left: myrem(57);
+    margin-top: myrem(41);
+  }
+}
+
+.p-form__container div:nth-of-type(2) .p-form__item-title {
+  margin-top: myrem(3);
+  @include mq(md) {
+    margin-top: myrem(33);
+  }
+}
+
+.p-form__container div:nth-of-type(3) .p-form__item-title {
+  margin-top: myrem(41);
+  @include mq(md) {
+    margin-top: myrem(49);
+    margin-left: myrem(1);
+  }
+}
+
+.p-form__container div:nth-of-type(4) .p-form__item-title {
+  margin-top: myrem(41);
+  @include mq(md) {
+    margin-top: myrem(50);
+    margin-left: myrem(2);
+  }
+}
+
+.p-form__container div:nth-of-type(5) .p-form__item-title {
+  margin-top: myrem(37);
+  margin-left: myrem(1);
+  margin-bottom: myrem(22);
+  @include mq(md) {
+    margin-top: myrem(36);
+    margin-left: myrem(1);
+  }
+}
+
+.p-form__container div:nth-of-type(6) .p-form__item-title {
+  margin-top: myrem(43);
+  margin-left: myrem(1);
+  @include mq(md) {
+    margin-top: myrem(42);
+    margin-left: myrem(1);
+  }
+}
+
+.p-form__container div:nth-of-type(7) .p-form__item-title {
+  margin-top: myrem(36);
+  @include mq(md) {
+    margin-top: myrem(37);
+    margin-left: myrem(0);
+  }
+}
+
+.p-form__container div:nth-of-type(8) .p-form__item-title {
+  margin-top: myrem(43);
+  margin-bottom: 0;
+  @include mq(md) {
+    margin-top: myrem(42);
+    margin-left: myrem(2);
+  }
+}
+
+.p-form__item-title::before {
+  content: "必須";
+  background-color: $pink;
+  color: $white;
+  font-size: myrem(12);
+  padding: myrem(5) myrem(10);
+  padding-right: myrem(8);
+  position: absolute;
+  left: myrem(-57);
+  top: myrem(-2);
+  @include mq(md) {
+    content: "必須";
+    background-color: $pink;
+    color: $white;
+    font-size: myrem(12);
+    padding: myrem(5) myrem(10);
+    padding-right: myrem(8);
+    padding-top: myrem(5);
+    position: absolute;
+    left: myrem(-57);
+    top: myrem(-2);
+  }
+}
+
+.p-form__container div:nth-of-type(8) .p-form__item-title::before {
+  content: "任意";
+  background-color: #8b8b8b;
+  left: myrem(-55);
+  @include mq(md) {
+    background-color: #8b8b8b;
+    left: myrem(-57);
+  }
+}
+
+.p-form__container div:nth-of-type(1) .p-form__item-title::after {
+  content: "例）example@example.com";
+  color: #cad5d5;
+  position: absolute;
+  top: myrem(-42);
+  left: myrem(-33);
+  font-size: myrem(14);
+  letter-spacing: calc(100 / 1000) * myrem(14);
+  @include mq(md) {
+    display: none;
+  }
+}
+
+.p-form__select-button {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  row-gap: myrem(11);
+  margin-top: myrem(22.5);
+  @include mq(md) {
+    justify-content: start;
+    column-gap: myrem(24);
+    margin-top: myrem(22);
+    row-gap: myrem(19);
+  }
+}
+
+.p-form__correct-checkbox {
+  margin-top: myrem(2);
+  margin-bottom: myrem(45);
+  @include mq(md) {
+    text-align: center;
+    margin-top: myrem(34);
+    margin-bottom: myrem(45);
+  }
+}
+
+input[type="checkbox"] {
+  position: relative;
+  width: 17px;
+  height: 17px;
+  margin: 0;
+  top: myrem(1);
+  left: 0px;
+  border: 1px solid #000;
+  vertical-align: -5px;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  cursor: pointer;
+  @include mq(md) {
+    position: relative;
+    margin: 0;
+    left: 1px;
+  }
+}
+
+input[type="checkbox"]:checked:before {
+  position: absolute;
+  top: -12px;
+  left: -3px;
+  transform: rotate(50deg);
+  height: 8px;
+  width: 42px;
+  border-bottom: 4px solid #40a9e0;
+  border-left: 2px solid #40a9e0;
+  transform: rotate(-45deg) perspective(30px) rotateY(60deg);
+  content: "";
+  @include mq(md) {
+  }
+}

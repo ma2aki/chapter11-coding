@@ -1,0 +1,15 @@
+@use "global" as *;
+
+.l-access {
+  padding-bottom: myrem(70);
+  background-image: url(../../images/access背景画像.webp);
+  background-position: bottom;
+  background-size: 100% 77%;
+  background-repeat: no-repeat;
+  margin-top: myrem(70);
+  @include mq(md) {
+    background-size: 100% 65%;
+    padding-bottom: myrem(115);
+    margin-top: myrem(80);
+  }
+}

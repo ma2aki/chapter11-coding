@@ -1,0 +1,18 @@
+@use "global" as *;
+
+.l-content {
+  text-align: center;
+  padding-top: myrem(40);
+  background-image: url(../../images/body背景画像.webp);
+  background-position: top;
+  background-size: 100% myrem(255);
+  background-repeat: no-repeat;
+  @include mq(md) {
+    padding-top: myrem(100);
+    background-image: url(../../images/body背景画像.webp);
+    background-position: top;
+    background-size: 100% myrem(255);
+    background-repeat: no-repeat;
+    padding-bottom: myrem(106);
+  }
+}

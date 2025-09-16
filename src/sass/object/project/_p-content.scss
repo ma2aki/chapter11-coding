@@ -1,0 +1,70 @@
+@use "global" as *;
+
+.p-content__wrapper {
+  border-radius: 20px;
+  background-color: $white;
+  @include mq(md) {
+  }
+}
+
+.p-content__wrapper p {
+  font-size: myrem(14);
+  margin-top: myrem(27);
+  @include l_height(14, 29);
+  letter-spacing: calc(30 / 1000) * myrem(14);
+  @include mq(md) {
+    @include l_height(14, 34);
+    letter-spacing: calc(100 / 1000) * myrem(14);
+    margin-top: myrem(45.5);
+    margin-left: myrem(2);
+  }
+}
+
+.p-content__maintext {
+  font-size: myrem(24);
+  font-weight: 500;
+  position: relative;
+  padding-top: myrem(45);
+  letter-spacing: calc(100 / 1000) * myrem(24);
+  margin-top: myrem(-2);
+  margin-left: myrem(4);
+  @include mq(md) {
+    font-size: myrem(32);
+    letter-spacing: calc(100 / 1000) * myrem(32);
+    padding-top: myrem(67.4);
+    margin-top: 0;
+    margin-left: 0;
+    margin-right: myrem(11);
+  }
+}
+
+.p-content__maintext::before {
+  content: "";
+  width: myrem(55);
+  height: 4px;
+  left: 49.6%;
+  transform: translateX(-50%);
+  display: inline-block;
+  background-color: #7bd1d5;
+  position: absolute;
+  bottom: myrem(-13);
+  @include mq(md) {
+    left: 49.8%;
+    bottom: myrem(-18);
+  }
+}
+
+.p-content__btn {
+  margin-top: myrem(34);
+  padding-right: myrem(80);
+  padding-left: myrem(79);
+  margin-bottom: myrem(61);
+  @include mq(md) {
+    margin: 0 auto;
+    margin-top: myrem(55);
+    padding-left: myrem(79);
+    padding-right: myrem(81);
+    padding-bottom: myrem(14);
+    padding-top: myrem(12);
+  }
+}

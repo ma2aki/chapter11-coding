@@ -1,0 +1,103 @@
+@use "global" as *;
+
+.c-form-items {
+  display: block;
+  width: 100%;
+  background-color: #edf5f5;
+  border-radius: 10px;
+  border: none;
+  font-size: myrem(14);
+  padding: myrem(10) myrem(14);
+  opacity: 60%;
+  cursor: pointer;
+  @include mq(md) {
+    padding: myrem(20) myrem(14);
+    font-size: myrem(16);
+    letter-spacing: calc(100 / 1000) * myrem(16);
+    padding-left: myrem(24);
+    border-radius: 20px;
+  }
+}
+
+.c-form-items:focus {
+  transform: 0.3s;
+  @include mq(md) {
+  }
+}
+
+.c-form-items::placeholder {
+  color: #cad5d5;
+  @include mq(md) {
+    color: #cad5d5;
+  }
+}
+
+.c-email::placeholder {
+  color: transparent;
+  @include mq(md) {
+    color: #cad5d5;
+  }
+}
+
+.c-name {
+  margin-top: myrem(22);
+  @include mq(md) {
+    margin-top: 0;
+  }
+}
+
+.c-name2 {
+  margin-top: myrem(22);
+  @include mq(md) {
+    margin-top: 0;
+  }
+}
+.c-name::placeholder {
+  position: relative;
+  left: 10px;
+  letter-spacing: calc(100 / 1000) * myrem(14);
+  @include mq(md) {
+    position: static;
+  }
+}
+
+.c-name2::placeholder {
+  color: transparent;
+  @include mq(md) {
+    color: #cad5d5;
+  }
+}
+
+.c-birthday {
+  padding-top: myrem(9.5);
+  padding-bottom: myrem(9);
+  @include mq(md) {
+    padding-top: myrem(20);
+    padding-bottom: myrem(18);
+  }
+}
+.c-birthday::placeholder {
+  position: relative;
+  font-size: myrem(16);
+  left: 10px;
+  letter-spacing: calc(100 / 1000) * myrem(16);
+  @include mq(md) {
+    position: static;
+  }
+}
+
+input[type="text"]:focus {
+  outline: 2px solid #7bd1d5;
+  transition: 0.2s;
+}
+
+input[type="email"]:focus {
+  outline: 2px solid #7bd1d5;
+  transition: 0.2s;
+}
+
+textarea:focus {
+  border: 2px solid #7bd1d5;
+  outline: 0;
+  transition: 0.2s;
+}

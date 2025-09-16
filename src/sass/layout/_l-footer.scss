@@ -1,0 +1,7 @@
+@use "global" as *;
+
+.l-footer {
+  background-color: #f8ffff;
+  @include mq(md) {
+  }
+}

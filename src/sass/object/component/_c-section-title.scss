@@ -1,0 +1,19 @@
+@use "global" as *;
+
+.c-section-title {
+  font-size: myrem(28);
+  font-weight: normal;
+  @include l_height(28, 40);
+  letter-spacing: calc(100 / 1000) * myrem(28);
+  @include mq(md) {
+    @include l_height(32, 46);
+    font-size: myrem(32);
+    letter-spacing: calc(100 / 1000) * myrem(32);
+  }
+}
+
+.c-section-title--letterspacing {
+  letter-spacing: calc(40 / 1000) * myrem(28);
+  @include mq(md) {
+  }
+}

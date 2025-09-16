@@ -1,0 +1,23 @@
+@use "global" as *;
+
+.l-About {
+  margin-top: myrem(70);
+  position: relative;
+  @include mq(md) {
+    margin-top: myrem(0);
+  }
+}
+
+.l-About::after {
+  @include mq(md) {
+    content: "";
+    position: absolute;
+    top: myrem(179);
+    right: 0;
+    background-image: url(../../images/AboutUs背景.webp);
+    background-repeat: no-repeat;
+    width: 64%;
+    height: 66%;
+    z-index: -1;
+  }
+}

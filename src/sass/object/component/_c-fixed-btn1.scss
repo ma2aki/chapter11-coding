@@ -1,0 +1,17 @@
+@use "global" as *;
+
+.c-fixed-btn1 {
+  width: 50%;
+  font-size: myrem(19);
+  background-color: $white;
+  letter-spacing: calc(27 / 1000) * myrem(19);
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  color: $black;
+  font-weight: bold;
+  padding: myrem(15) 0;
+  padding-right: myrem(13);
+  @include mq(md) {
+  }
+}

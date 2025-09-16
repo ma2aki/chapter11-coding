@@ -1,0 +1,12 @@
+@use "global" as *;
+
+.c-fadeIn-left {
+  opacity: 0;
+  transform: translate(-50%, 0); // 調整済み
+  transition: opacity 3s, transform 1s; // 遷移プロパティを明示
+}
+
+.c-fadeIn-left.animated {
+  transform: translate(0, 0);
+  opacity: 1;
+}

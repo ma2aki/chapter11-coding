@@ -1,0 +1,14 @@
+@use "global" as *;
+
+.l-form {
+  padding-bottom: myrem(50);
+  padding-top: myrem(40);
+  background-image: url(../../images/body背景画像.webp);
+  background-position: top;
+  background-size: 100% myrem(255);
+  background-repeat: no-repeat;
+  @include mq(md) {
+    padding-bottom: myrem(110);
+    padding-top: myrem(100);
+  }
+}

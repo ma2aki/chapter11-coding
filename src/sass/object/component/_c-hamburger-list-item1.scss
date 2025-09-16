@@ -1,0 +1,7 @@
+@use "global" as *;
+
+.c-hamburger-list-item1 {
+  border-bottom: 1px solid $blue2;
+  @include mq(md) {
+  }
+}

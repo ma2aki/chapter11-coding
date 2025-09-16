@@ -1,0 +1,47 @@
+@use "global" as *;
+
+.c-footer-list2 {
+  width: 91%;
+  margin: 0 auto;
+  padding-bottom: myrem(8);
+  border-bottom: 1px solid #e0e0e0;
+  font-size: myrem(14);
+  position: relative;
+  letter-spacing: calc(100 / 1000) * myrem(14);
+  @include mq(md) {
+    border: none;
+    margin-bottom: myrem(10);
+    margin-left: myrem(2);
+    padding: 0;
+    letter-spacing: calc(100 / 1000) * myrem(14);
+  }
+}
+.c-footer-list2 a {
+  display: block;
+  width: 100%;
+  @include mq(md) {
+    width: 120%;
+  }
+}
+
+.c-footer-list2:after {
+  content: "";
+  position: absolute;
+  top: 40%;
+  right: 0;
+  transform: translateY(-50%) rotate(45deg);
+  width: 7px;
+  height: 7px;
+  border-top: 1px solid $black;
+  border-right: 1px solid $black;
+  @include mq(md) {
+    top: 50%;
+    right: -3px;
+    transform: translateY(-50%) rotate(45deg);
+    width: 6px;
+    height: 6px;
+    border-top: 1px solid $black;
+    border-right: 1px solid $black;
+    pointer-events: none;
+  }
+}

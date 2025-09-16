@@ -1,0 +1,7 @@
+@use "global" as *;
+
+.c-sendpage-maintext-return {
+  @include mq(md) {
+    display: none;
+  }
+}

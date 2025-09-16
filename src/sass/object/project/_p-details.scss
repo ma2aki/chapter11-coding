@@ -1,0 +1,32 @@
+@use "global" as *;
+
+.p-details {
+  @include mq(md) {
+  }
+}
+
+.p-details__title {
+  font-size: myrem(22);
+  text-align: center;
+  font-weight: 400;
+  margin: myrem(14) 0 myrem(11) 0;
+  margin-left: myrem(3);
+  @include mq(md) {
+    margin: 0;
+  }
+}
+
+.p-details__list {
+  @include mq(md) {
+    display: flex;
+    margin-top: myrem(12);
+  }
+}
+
+.p-details__btn {
+  margin-top: myrem(38);
+  text-align: center;
+  @include mq(md) {
+    margin-top: myrem(50);
+  }
+}

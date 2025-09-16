@@ -1,0 +1,17 @@
+@use "global" as *;
+
+.c-form-item-massage-text {
+  font-size: myrem(12);
+  letter-spacing: calc(40 / 1000) * myrem(12);
+  @include l_height(12, 17);
+  margin-top: myrem(12);
+  width: myrem(311);
+  @include mq(md) {
+    width: initial;
+    font-size: myrem(14);
+    @include l_height(14, 20);
+    letter-spacing: calc(100 / 1000) * myrem(14);
+    margin-top: myrem(22);
+    margin-bottom: myrem(20);
+  }
+}

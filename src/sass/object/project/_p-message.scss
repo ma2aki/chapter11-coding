@@ -1,0 +1,82 @@
+@use "global" as *;
+
+.p-message {
+  @include mq(md) {
+  }
+}
+
+.p-message__title {
+  text-align: center;
+  @include mq(md) {
+    text-align: left;
+  }
+}
+
+.p-message__subtitle {
+  margin-top: myrem(-2);
+  margin-left: myrem(2);
+  letter-spacing: calc(40 / 1000) * myrem(14);
+  @include mq(md) {
+    margin-top: 0;
+    margin-left: 0;
+    letter-spacing: calc(100 / 1000) * myrem(18);
+  }
+}
+
+.p-message__container {
+  position: relative;
+  order: 1;
+  @include mq(md) {
+    order: initial;
+    top: 50%;
+    width: 100%;
+  }
+}
+
+.p-message__mv {
+  order: 2;
+  border-radius: 0 30px 30px 0;
+  margin-top: myrem(27);
+  margin-left: calc(49% - 50vw);
+  height: 66.66666666666666vw;
+  overflow: hidden;
+  @include mq(md) {
+    width: 47.14285714285714vw;
+    height: 27.143vw;
+    grid-row: span 2 / span 2;
+    order: initial;
+    margin-left: calc(100% - 50vw);
+    margin-top: myrem(27);
+    border-radius: 0 50px 50px 0;
+  }
+}
+
+.p-message__text-img {
+  position: absolute;
+  top: myrem(87);
+  right: myrem(2);
+  width: 60.53333333333333vw;
+  z-index: 1;
+  @include mq(md) {
+    right: myrem(43);
+    top: myrem(-13);
+    width: myrem(235);
+    object-fit: cover;
+  }
+}
+
+.p-message-container__text {
+  margin-top: myrem(14);
+  font-size: myrem(14);
+  letter-spacing: calc(30 / 1000) * myrem(14);
+  order: 3;
+  @include l_height(14, 24);
+  @include mq(md) {
+    grid-column-start: 2;
+    grid-row-start: 2;
+    margin-top: myrem(0);
+    position: relative;
+    top: myrem(8);
+    font-size: myrem(14);
+  }
+}

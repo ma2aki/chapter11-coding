@@ -1,0 +1,12 @@
+@use "global" as *;
+
+.c-fadeIn-right {
+  opacity: 0;
+  transform: translate(50px, 0); // 調整済み
+  transition: opacity 4s, transform 1s; // 遷移プロパティを明示
+}
+
+.c-fadeIn-right.animated {
+  transform: translate(0, 0);
+  opacity: 1;
+}
