@@ -3,9 +3,26 @@
 .l-facility {
   padding-top: myrem(60);
   padding-bottom: myrem(80);
+  position: relative;
   @include mq(md) {
     padding-bottom: myrem(70);
     padding-top: myrem(70);
     margin-top: myrem(110);
+  }
+}
+
+.l-facility::after {
+  content: "";
+  position: absolute;
+  background-image: url(../../images/AboutUs背景.webp);
+  background-size: cover;
+  width: 70%;
+  height: 100%;
+  background-position: left;
+  background-repeat: no-repeat;
+  top: 0;
+  z-index: -1;
+  @include mq(md) {
+    display: none;
   }
 }

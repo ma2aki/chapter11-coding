@@ -250,12 +250,31 @@ button {
 .l-facility {
   padding-top: 3.75rem;
   padding-bottom: 5rem;
+  position: relative;
 }
 @media screen and (min-width: 768px) {
   .l-facility {
     padding-bottom: 4.375rem;
     padding-top: 4.375rem;
     margin-top: 6.875rem;
+  }
+}
+
+.l-facility::after {
+  content: "";
+  position: absolute;
+  background-image: url(../../images/AboutUs背景.webp);
+  background-size: cover;
+  width: 70%;
+  height: 100%;
+  background-position: left;
+  background-repeat: no-repeat;
+  top: 0;
+  z-index: -1;
+}
+@media screen and (min-width: 768px) {
+  .l-facility::after {
+    display: none;
   }
 }
 
