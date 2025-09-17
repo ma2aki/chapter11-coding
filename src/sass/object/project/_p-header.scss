@@ -413,19 +413,6 @@ body.hamburger-menu--open {
   top: 16px;
 }
 
-.c-blue-btn span::after {
-  content: "";
-  position: absolute;
-  top: 44%;
-  right: 15px;
-  transform: translateY(-50%) rotate(45deg);
-  width: 10px;
-  height: 1px;
-  background-color: $blue;
-  border-radius: 1px;
-  @include mq(md) {
-  }
-}
 .p-header__hamburger span:nth-child(2)::before,
 .p-header__hamburger span:nth-child(2)::after {
   top: 24px;

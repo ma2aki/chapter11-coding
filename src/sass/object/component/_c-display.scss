@@ -1,6 +1,6 @@
 @use "global" as *;
 
-.c-sendpage-maintext-return {
+.c-display {
   @include mq(md) {
     display: none;
   }

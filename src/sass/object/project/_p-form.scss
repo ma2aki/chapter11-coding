@@ -38,14 +38,14 @@
   }
 }
 
-.p-form__title h3 {
+.p-form__maintitle {
   letter-spacing: calc(40 / 1000) * myrem(28);
   @include mq(md) {
     letter-spacing: calc(100 / 1000) * myrem(32);
   }
 }
 
-.p-form__title p {
+.p-form__subtitle {
   letter-spacing: calc(40 / 1000) * myrem(14);
   @include mq(md) {
     letter-spacing: calc(100 / 1000) * myrem(18);
@@ -54,13 +54,10 @@
 
 .p-form__btn {
   margin-top: myrem(32);
-  padding-left: myrem(86);
-  padding-right: myrem(87);
+  text-align: center;
   @include mq(md) {
     margin: 0 auto;
     margin-top: myrem(32);
-    padding-left: myrem(85);
-    padding-right: myrem(87);
   }
 }
 
@@ -80,14 +77,14 @@
   }
 }
 
-.p-form__container div:nth-of-type(2) .p-form__item-title {
+.p-form__item:nth-of-type(2) .p-form__item-title {
   margin-top: myrem(3);
   @include mq(md) {
     margin-top: myrem(33);
   }
 }
 
-.p-form__container div:nth-of-type(3) .p-form__item-title {
+.p-form__item:nth-of-type(3) .p-form__item-title {
   margin-top: myrem(41);
   @include mq(md) {
     margin-top: myrem(49);
@@ -95,7 +92,7 @@
   }
 }
 
-.p-form__container div:nth-of-type(4) .p-form__item-title {
+.p-form__item:nth-of-type(4) .p-form__item-title {
   margin-top: myrem(41);
   @include mq(md) {
     margin-top: myrem(50);
@@ -103,7 +100,7 @@
   }
 }
 
-.p-form__container div:nth-of-type(5) .p-form__item-title {
+.p-form__item:nth-of-type(5) .p-form__item-title {
   margin-top: myrem(37);
   margin-left: myrem(1);
   margin-bottom: myrem(22);
@@ -113,7 +110,7 @@
   }
 }
 
-.p-form__container div:nth-of-type(6) .p-form__item-title {
+.p-form__item:nth-of-type(6) .p-form__item-title {
   margin-top: myrem(43);
   margin-left: myrem(1);
   @include mq(md) {
@@ -122,7 +119,7 @@
   }
 }
 
-.p-form__container div:nth-of-type(7) .p-form__item-title {
+.p-form__item:nth-of-type(7) .p-form__item-title {
   margin-top: myrem(36);
   @include mq(md) {
     margin-top: myrem(37);
@@ -130,7 +127,7 @@
   }
 }
 
-.p-form__container div:nth-of-type(8) .p-form__item-title {
+.p-form__item:nth-of-type(8) .p-form__item-title {
   margin-top: myrem(43);
   margin-bottom: 0;
   @include mq(md) {
@@ -163,7 +160,7 @@
   }
 }
 
-.p-form__container div:nth-of-type(8) .p-form__item-title::before {
+.p-form__item:nth-of-type(8) .p-form__item-title::before {
   content: "任意";
   background-color: #8b8b8b;
   left: myrem(-55);
@@ -173,7 +170,7 @@
   }
 }
 
-.p-form__container div:nth-of-type(1) .p-form__item-title::after {
+.p-form__item:nth-of-type(1) .p-form__item-title::after {
   content: "例）example@example.com";
   color: #cad5d5;
   position: absolute;
@@ -186,7 +183,7 @@
   }
 }
 
-.p-form__select-button {
+.p-form__select-buttons {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
@@ -241,6 +238,361 @@ input[type="checkbox"]:checked:before {
   border-left: 2px solid #40a9e0;
   transform: rotate(-45deg) perspective(30px) rotateY(60deg);
   content: "";
+  @include mq(md) {
+  }
+}
+
+.p-form__items {
+  display: block;
+  width: 100%;
+  background-color: #edf5f5;
+  border-radius: 10px;
+  border: none;
+  font-size: myrem(14);
+  padding: myrem(10) myrem(14);
+  opacity: 60%;
+  cursor: pointer;
+  @include mq(md) {
+    padding: myrem(20) myrem(14);
+    font-size: myrem(16);
+    letter-spacing: calc(100 / 1000) * myrem(16);
+    padding-left: myrem(24);
+    border-radius: 20px;
+  }
+}
+
+.p-form__items:focus {
+  transform: 0.3s;
+  @include mq(md) {
+  }
+}
+
+.p-form__items::placeholder {
+  color: #cad5d5;
+  @include mq(md) {
+    color: #cad5d5;
+  }
+}
+
+.p-form__items--email::placeholder {
+  color: transparent;
+  @include mq(md) {
+    color: #cad5d5;
+  }
+}
+
+.p-form__items--name {
+  margin-top: myrem(22);
+  @include mq(md) {
+    margin-top: 0;
+  }
+}
+
+.p-form__items--name--kana {
+  margin-top: myrem(22);
+  @include mq(md) {
+    margin-top: 0;
+  }
+}
+.p-form__items--name::placeholder {
+  position: relative;
+  left: 10px;
+  letter-spacing: calc(100 / 1000) * myrem(14);
+  @include mq(md) {
+    position: static;
+  }
+}
+
+.p-form__items--name--kana::placeholder {
+  color: transparent;
+  @include mq(md) {
+    color: #cad5d5;
+  }
+}
+
+.p-form__items--birthday {
+  padding-top: myrem(9.5);
+  padding-bottom: myrem(9);
+  @include mq(md) {
+    padding-top: myrem(20);
+    padding-bottom: myrem(18);
+  }
+}
+.p-form__items--birthday::placeholder {
+  position: relative;
+  font-size: myrem(16);
+  left: 10px;
+  letter-spacing: calc(100 / 1000) * myrem(16);
+  @include mq(md) {
+    position: static;
+  }
+}
+
+input[type="text"]:focus {
+  outline: 2px solid #7bd1d5;
+  transition: 0.2s;
+}
+
+input[type="email"]:focus {
+  outline: 2px solid #7bd1d5;
+  transition: 0.2s;
+}
+
+textarea:focus {
+  border: 2px solid #7bd1d5;
+  outline: 0;
+  transition: 0.2s;
+}
+
+input[type="radio"] {
+  position: relative;
+  left: myrem(-7);
+  top: myrem(1);
+  width: 35px;
+  height: 35px;
+  border: 1px solid #000;
+  border-radius: 50%;
+  vertical-align: 1px;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  cursor: pointer;
+  @include mq(md) {
+    inline-size: 35px;
+    block-size: 36px;
+    margin: 0;
+    position: relative;
+    left: 0;
+  }
+}
+
+input[type="radio"]:checked {
+  border: 1px solid #a4dde0;
+  transition: 0.3s;
+  @include mq(md) {
+  }
+}
+input[type="radio"]:checked:before {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: myrem(21);
+  height: myrem(21);
+  border-radius: 50%;
+  background: #a4dde0;
+  content: "";
+  transition: 0.3s;
+  @include mq(md) {
+    margin: 0;
+  }
+}
+
+input[type="radio"]:nth-of-type(2) {
+  inline-size: 35px;
+  block-size: 36px;
+  margin: 0;
+  margin-left: myrem(40);
+  transition: 0.3s;
+  @include mq(md) {
+    inline-size: 35px;
+    block-size: 36px;
+    margin: 0;
+    margin-left: myrem(42.7);
+  }
+}
+
+input[type="radio"]:nth-of-type(3) {
+  inline-size: 35px;
+  block-size: 36px;
+  margin: 0;
+  margin-left: myrem(42.7);
+  transition: 0.3s;
+  @include mq(md) {
+    inline-size: 35px;
+    block-size: 36px;
+    margin: 0;
+    margin-left: myrem(42.7);
+  }
+}
+
+input[value="visit"] {
+  @include mq(md) {
+    inline-size: 35px;
+    block-size: 36px;
+    margin: 0;
+  }
+}
+
+input[value="visit"]:nth-of-type(1) {
+  left: myrem(-5);
+  top: 0;
+  @include mq(md) {
+    left: 0;
+    top: myrem(2);
+  }
+}
+input[value="visit"]:nth-of-type(2) {
+  left: myrem(-21);
+  @include mq(md) {
+    left: myrem(-15);
+    top: myrem(1);
+  }
+}
+
+label[for="male"] {
+  letter-spacing: calc(100 / 1000) * myrem(14);
+  font-size: myrem(14);
+  position: relative;
+  top: myrem(-11);
+  @include mq(md) {
+    font-size: myrem(14);
+    position: relative;
+    top: myrem(-11);
+    left: myrem(12);
+    letter-spacing: calc(100 / 1000) * myrem(14);
+  }
+}
+
+label[for="female"] {
+  font-size: myrem(14);
+  position: relative;
+  top: myrem(-11);
+  left: myrem(3);
+  letter-spacing: calc(100 / 1000) * myrem(14);
+  @include mq(md) {
+    font-size: myrem(14);
+    position: relative;
+    top: myrem(-11);
+    left: myrem(12);
+    letter-spacing: calc(100 / 1000) * myrem(14);
+  }
+}
+
+label[for="other"] {
+  font-size: myrem(14);
+  position: relative;
+  top: myrem(-11);
+  left: myrem(5);
+  letter-spacing: calc(100 / 1000) * myrem(14);
+  @include mq(md) {
+    font-size: myrem(14);
+    position: relative;
+    top: myrem(-11);
+    left: myrem(15);
+    letter-spacing: calc(100 / 1000) * myrem(14);
+  }
+}
+
+label[for="firstTime"] {
+  font-size: myrem(14);
+  position: relative;
+  top: myrem(-12);
+  left: myrem(2);
+  letter-spacing: calc(100 / 1000) * myrem(14);
+  @include mq(md) {
+    font-size: myrem(14);
+    position: relative;
+    top: myrem(-11);
+    left: myrem(12);
+    letter-spacing: calc(100 / 1000) * myrem(14);
+  }
+}
+
+label[for="secondTimes"] {
+  font-size: myrem(14);
+  position: relative;
+  top: myrem(-12);
+  left: myrem(-9);
+  letter-spacing: calc(100 / 1000) * myrem(14);
+  @include mq(md) {
+    font-size: myrem(14);
+    position: relative;
+    top: myrem(-11);
+    left: myrem(-3);
+    letter-spacing: calc(100 / 1000) * myrem(14);
+  }
+}
+
+.p-form__items-massage-text {
+  font-size: myrem(12);
+  letter-spacing: calc(40 / 1000) * myrem(12);
+  @include l_height(12, 17);
+  margin-top: myrem(12);
+  width: myrem(311);
+  @include mq(md) {
+    width: initial;
+    font-size: myrem(14);
+    @include l_height(14, 20);
+    letter-spacing: calc(100 / 1000) * myrem(14);
+    margin-top: myrem(22);
+    margin-bottom: myrem(20);
+  }
+}
+
+.p-form__items-text {
+  font-size: myrem(12);
+  margin: myrem(15) 0;
+  letter-spacing: calc(100 / 1000) * myrem(12);
+  @include l_height(12, 17);
+  @include mq(md) {
+    font-size: myrem(14);
+    @include l_height(14, 20);
+    letter-spacing: calc(100 / 1000) * myrem(14);
+    margin-top: myrem(19);
+    margin-bottom: myrem(0);
+  }
+}
+
+.p-form__checkbox {
+  font-size: myrem(12);
+  letter-spacing: calc(40 / 1000) * myrem(12);
+  position: relative;
+  top: myrem(0);
+  left: myrem(7);
+  @include l_height(12, 17);
+  @include mq(md) {
+    top: 0;
+    left: initial;
+    font-size: myrem(14);
+    @include l_height(14, 20);
+    letter-spacing: calc(100 / 1000) * myrem(14);
+    margin-left: myrem(17);
+    bottom: myrem(13);
+  }
+}
+
+.p-form__checkbox::before {
+  content: "";
+  width: 119px;
+  height: 1px;
+  display: inline-block;
+  background-color: $black;
+  position: absolute;
+  bottom: -5px;
+  @include mq(md) {
+    left: myrem(3);
+  }
+}
+
+.p-form__items-massage-textarea {
+  border: none;
+  width: 100%;
+  opacity: 0.6;
+  border-radius: 10px;
+  background-color: #edf5f5;
+  margin-top: myrem(14);
+  padding: myrem(7) myrem(7);
+  cursor: pointer;
+  @include mq(md) {
+    margin-top: 0;
+    padding: myrem(14) myrem(14);
+    border-radius: 20px;
+  }
+}
+
+.p-form__items-massage-textarea:focus {
+  transition: 0.3s;
   @include mq(md) {
   }
 }

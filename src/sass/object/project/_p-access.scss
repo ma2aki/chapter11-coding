@@ -29,6 +29,12 @@
   }
 }
 
+.p-access__btn  {
+  text-align: center;
+@include mq(md) {
+}
+}
+
 .p-access__container-contents {
   @include mq(md) {
     display: flex;

@@ -1,10 +1,10 @@
 @use "global" as *;
 
-.c-btn__purple {
+.c-btn03 {
   margin: 0 auto;
   margin-top: myrem(60);
   font-size: myrem(14);
-  display: block;
+  display: inline-block;
   padding-left: myrem(58);
   padding-right: myrem(55);
   padding-top: myrem(13);
@@ -13,7 +13,6 @@
   user-select: none;
   width: fit-content;
   transition: all 0.3s;
-  text-align: center;
   text-decoration: none;
   border: 1px solid $violet;
   border-radius: 25px;
@@ -30,11 +29,10 @@
     padding-left: myrem(58);
     padding-top: myrem(13);
     padding-bottom: myrem(13);
-    display: block;
   }
 }
 
-.c-btn__purple::before {
+.c-btn03::before {
   /* 背景色 */
   content: "";
   position: absolute;
@@ -49,26 +47,26 @@
   z-index: -1;
 }
 
-.c-btn_.c-btn__purple::before {
+.c-btn_.c-btn03::before {
   transform: scaleX(1); /* 0→1でX軸方向に100%変形 */
   transform-origin: left;
 }
 
-.c-btn__purple:hover {
+.c-btn03:hover {
   @include mq(md) {
     color: $violet;
     opacity: 0.9;
   }
 }
 
-.c-btn__purple:hover::before {
+.c-btn03:hover::before {
   @include mq(md) {
     transform: scaleX(1); /* 0→1でX軸方向に100%変形 */
     transform-origin: bottom left;
   }
 }
 
-.c-btn__purple span::before {
+.c-btn03 span::before {
   content: "";
   position: absolute;
   top: 58%;
@@ -81,7 +79,7 @@
   @include mq(md) {
   }
 }
-.c-btn__purple span::after {
+.c-btn03 span::after {
   content: "";
   position: absolute;
   top: 44%;
@@ -95,12 +93,12 @@
   }
 }
 
-.c-btn__purple:hover span::after {
+.c-btn03:hover span::after {
   @include mq(md) {
     background-color: $violet;
   }
 }
-.c-btn__purple:hover span::before {
+.c-btn03:hover span::before {
   @include mq(md) {
     background-color: $violet;
   }

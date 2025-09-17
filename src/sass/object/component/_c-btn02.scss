@@ -1,6 +1,6 @@
 @use "global" as *;
 
-.c-blue-btn {
+.c-btn02 {
   margin: 0 auto;
   font-size: myrem(14);
   display: block;
@@ -36,7 +36,7 @@
   }
 }
 
-.c-blue-btn::before {
+.c-btn02::before {
   /* 背景色 */
   content: "";
   position: absolute;
@@ -53,28 +53,28 @@
   }
 }
 
-.c-blue-btn:hover::before {
+.c-btn02:hover::before {
   @include mq(md) {
     transform: scaleX(1); /* 0→1でX軸方向に100%変形 */
     transform-origin: left;
   }
 }
 
-.c-blue-btn:hover {
+.c-btn02:hover {
   @include mq(md) {
     color: $white;
     opacity: 0.9;
   }
 }
 
-.c-blue-btn:hover::before {
+.c-btn02:hover::before {
   @include mq(md) {
     transform: scaleX(1); /* 0→1でX軸方向に100%変形 */
     transform-origin: bottom left;
   }
 }
 
-.c-blue-btn span::before {
+.c-btn02 span::before {
   content: "";
   position: absolute;
   top: 58%;
@@ -87,7 +87,7 @@
   @include mq(md) {
   }
 }
-.c-blue-btn span::after {
+.c-btn02 span::after {
   content: "";
   position: absolute;
   top: 44%;
@@ -101,18 +101,21 @@
   }
 }
 
-.c-blue-btn:hover span::after {
+
+.c-btn02:hover span::after {
   @include mq(md) {
     background-color: $white;
   }
 }
-.c-blue-btn:hover span::before {
+.c-btn02:hover span::before {
   @include mq(md) {
     background-color: $white;
   }
 }
 
-.c-blue-btn--reverse {
+
+
+.c-btn02--reverse {
   display: inline-block;
   font-size: myrem(14);
   padding-left: myrem(76);
@@ -147,7 +150,7 @@
   }
 }
 
-.c-blue-btn--reverse::before {
+.c-btn02--reverse::before {
   /* 背景色 */
   content: "";
   position: absolute;
@@ -164,14 +167,14 @@
   }
 }
 
-.c-blue-btn--reverse:hover::before {
+.c-btn02--reverse:hover::before {
   @include mq(md) {
     transform: scaleX(1); /* 0→1でX軸方向に100%変形 */
     transform-origin: left;
   }
 }
 
-.c-blue-btn--reverse:hover {
+.c-btn02--reverse:hover {
   @include mq(md) {
     color: $blue;
     opacity: 0.9;
@@ -179,14 +182,14 @@
   }
 }
 
-.c-blue-btn--reverse:hover::before {
+.c-btn02--reverse:hover::before {
   @include mq(md) {
     transform: scaleX(1); /* 0→1でX軸方向に100%変形 */
     transform-origin: bottom left;
   }
 }
 
-.c-blue-btn.c-blue-btn--reverse span::before {
+.c-btn02.c-btn02--reverse span::before {
   content: "";
   position: absolute;
   top: 58%;
@@ -199,7 +202,7 @@
   @include mq(md) {
   }
 }
-.c-blue-btn.c-blue-btn--reverse span::after {
+.c-btn02.c-btn02--reverse span::after {
   content: "";
   position: absolute;
   top: 44%;
@@ -213,13 +216,13 @@
   }
 }
 
-.c-blue-btn--reverse:hover span::before {
+.c-btn02--reverse:hover span::before {
   @include mq(md) {
     background-color: $blue;
   }
 }
 
-.c-blue-btn--reverse:hover span::after {
+.c-btn02--reverse:hover span::after {
   @include mq(md) {
     background-color: $blue;
   }

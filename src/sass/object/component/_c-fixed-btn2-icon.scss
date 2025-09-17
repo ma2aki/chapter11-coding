@@ -1,9 +1,0 @@
-@use "global" as *;
-
-.c-fixed-btn2-icon {
-  margin-right: myrem(15);
-  width: myrem(22.85);
-  height: myrem(24);
-  @include mq(md) {
-  }
-}

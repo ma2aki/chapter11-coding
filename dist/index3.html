@@ -103,7 +103,7 @@
         <div class="p-header__reserve">
           <a class="p-header__reserve-btn" href="index3.html">Web予約</a>
         </div>
-        <button class="p-header__hamburger" id="js-hamburger-menu">
+        <button class="p-header__hamburger" id="js-hamburger-menu"  aria-label="ハンバーガーボタン">
           <span></span>
           <span></span>
           <span></span>
@@ -126,12 +126,12 @@ main-form
               <p class="p-form__subtitle c-section-subtitle">Reservation</p>
             </div>
             <form class="p-form__container" action="index4.html">
-              <div>
+              <div class="p-form__item">
                 <label class="p-form__item-title" for="email"
                   >メールアドレス</label
                 >
                 <input
-                  class="c-form-items c-email"
+                  class="p-form__items p-form__items--email"
                   type="email"
                   id="email"
                   name="email"
@@ -139,10 +139,10 @@ main-form
                   required
                 />
               </div>
-              <div>
+              <div class="p-form__item">
                 <label class="p-form__item-title" for="name">お名前</label>
                 <input
-                  class="c-form-items c-name"
+                  class="p-form__items p-form__items--name"
                   type="text"
                   id="name"
                   name="name"
@@ -150,22 +150,22 @@ main-form
                   required
                 />
               </div>
-              <div>
+              <div class="p-form__item">
                 <label class="p-form__item-title" for="kana">ふりがな</label>
                 <input
-                  class="c-form-items c-name2"
+                  class="p-form__items p-form__items--name--kana"
                   type="text"
                   id="kana"
                   name="kana"
                   placeholder="たなか　たろう"
                   required
                 />
-                <p class="c-kana-name-text">
+                <p class="p-form__items-text">
                   ※携帯メールアドレスの場合、迷惑メール対策によりメールが受信できない事例が多発しております。恐れ入りますが、各種携帯電話会社のドメイン制限の解除をお願い致します。
                 </p>
               </div>
 
-              <div>
+              <div class="p-form__item">
                 <p class="p-form__item-title">性別</p>
                 <input id="male" type="radio" name="sex" value="male" /><label
                   for="male"
@@ -183,12 +183,12 @@ main-form
                 >
               </div>
 
-              <div>
+              <div class="p-form__item">
                 <label class="p-form__item-title" for="birthday"
                   >生年月日</label
                 >
                 <input
-                  class="c-form-items c-birthday"
+                  class="p-form__items p-form__items--birthday"
                   type="text"
                   name="birthday"
                   placeholder="例）19800101"
@@ -196,7 +196,7 @@ main-form
                 />
               </div>
 
-              <div>
+              <div class="p-form__item">
                 <p class="p-form__item-title">当院での受診</p>
                 <input
                   class="c-form-radio-btns"
@@ -214,42 +214,45 @@ main-form
                   value="visit"
                 /><label for="secondTimes">2回目以降</label>
               </div>
-              <div>
+              <div class="p-form__item">
                 <label class="p-form__item-title"
                   >診療内容を選択してください。</label
                 >
-                <div class="p-form__select-button">
-                  <div class="c-form-buttons">虫歯</div>
-                  <div class="c-form-buttons">顎関節症</div>
-                  <div class="c-form-buttons">クリーニング</div>
-                  <div class="c-form-buttons">ホワイトニング</div>
-                  <div class="c-form-buttons">一般矯正</div>
-                  <div class="c-form-buttons">歯科検診</div>
-                  <div class="c-form-buttons">歯周病</div>
-                  <div class="c-form-buttons">詰め物・かぶせ物</div>
+                <div class="p-form__select-buttons">
+                  <div class="p-form__select-button c-form-buttons">虫歯</div>
+                  <div class="p-form__select-button c-form-buttons">顎関節症</div>
+                  <div class="p-form__select-button c-form-buttons">クリーニング</div>
+                  <div class="p-form__select-button c-form-buttons">ホワイトニング</div>
+                  <div class="p-form__select-button c-form-buttons">一般矯正</div>
+                  <div class="p-form__select-button c-form-buttons">歯科検診</div>
+                  <div class="p-form__select-button c-form-buttons">歯周病</div>
+                  <div class="p-form__select-button c-form-buttons">詰め物・かぶせ物</div>
                 </div>
               </div>
 
-              <div>
-                <label class="p-form__item-title">担当医へのメッセージ</label>
-                <p class="c-form-item-massage-text">
+              <div class="p-form__item">
+                <label class="p-form__item-title" for="doctor-message">担当医へのメッセージ</label>
+                <p class="p-form__items-massage-text">
                   ※担当医へのメッセージ、電話がつながりやすい時間があればこの欄にご記入ください。
                 </p>
                 <textarea
-                  class="c-form-item-massage-textarea"
+                  id="doctor-message"
+                  class="p-form__items-massage-textarea"
                   rows="7"
                 ></textarea>
               </div>
               <div class="p-form__correct-checkbox">
                 <input type="checkbox" id="scales" name="scales" />
-                <label class="c-form-correct-checkbox" for="scales"
+                <label class="p-form__checkbox" for="scales"
                   ><a href="#" target="_blank">個人情報保護方針</a
                   >に同意のうえ、ご送信ください。</label
                 >
               </div>
-              <a class="p-form__btn c-blue-btn-reverse" href="index4.html"
+              <div class="p-form__btn">
+              <a class="c-btn02 c-btn02--reverse c-btn02--padding" href="index4.html"
                 >送信する<span></span
               ></a>
+            </div>
             </form>
           </div>
         </div>
@@ -264,7 +267,7 @@ main-form
       <div class="l-inner">
         <div class="p-footer__wrapper">
           <div class="p-footer__title">
-            <a href="index.html">
+            <a href="index.html" title="send-page">
               <img src="images/ASSIST DENTAL CLINIC.webp" alt="" />
             </a>
           </div>
