@@ -113,7 +113,11 @@
         <div class="p-header__reserve">
           <a class="p-header__reserve-btn" href="index3.html">Web予約</a>
         </div>
-        <button class="p-header__hamburger" id="js-hamburger-menu" aria-label="ハンバーガーボタン">
+        <button
+          class="p-header__hamburger"
+          id="js-hamburger-menu"
+          aria-label="ハンバーガーボタン"
+        >
           <span></span>
           <span></span>
           <span></span>
@@ -205,6 +209,7 @@
        -------------------->
       <section class="p-About l-About">
         <div class="p-About__inner l-inner">
+          <div class="p-About__box"></div>
           <div class="p-About__wrapper">
             <div class="p-About__img-box">
               <div class="p-About__img1 c-fadeIn-left">
@@ -398,14 +403,13 @@
       <section class="p-message l-message" id="message">
         <div class="p-message__inner l-inner">
           <div class="p-message__wrapper">
-
-              <div class="p-message__mv c-fadeIn-left">
-                <img
-                  src="images/院長ご挨拶/院長ご挨拶１pc.webp"
-                  alt="院長画像"
-                />
-              </div>
-              <div class="p-message__container">
+            <div class="p-message__mv c-fadeIn-left">
+              <img
+                src="images/院長ご挨拶/院長ご挨拶１pc.webp"
+                alt="院長画像"
+              />
+            </div>
+            <div class="p-message__container">
               <div class="p-message__title c-fadeIn-bottom">
                 <h3
                   class="p-message__maintitle c-section-title c-section-title--letterspacing"
@@ -641,10 +645,10 @@
               </div>
             </div>
             <div class="p-access__btn">
-            <a class="c-btn03" href="index3.html"
-              >WEB予約はこちら<span></span
-            ></a>
-          </div>
+              <a class="c-btn03" href="index3.html"
+                >WEB予約はこちら<span></span
+              ></a>
+            </div>
           </div>
         </div>
       </section>
@@ -679,37 +683,52 @@
       <div class="p-footer__inner l-inner">
         <div class="p-footer__wrapper">
           <div class="p-footer__title">
-            <a class="p-footer__title-link" href="index.html" title="Go to page">
+            <a
+              class="p-footer__title-link"
+              href="index.html"
+              title="Go to page"
+            >
               <img src="images/ASSIST DENTAL CLINIC.webp" alt="" />
             </a>
           </div>
-          <ul class="p-footer__info1">
-            <li class="c-footer-list">
-              <a href="#anouns">新着情報</a>
+          <ul class="p-footer__list">
+            <li class="p-footer__item">
+              <a class="p-footer__item-link" href="#anouns">新着情報</a>
             </li>
-            <li class="c-footer-list">
-              <a href="#detail">診察内容</a>
+            <li class="p-footer__item">
+              <a class="p-footer__item-link" href="#detail">診察内容</a>
             </li>
-            <li class="c-footer-list">
-              <a href="#flow">治療の流れ</a>
+            <li class="p-footer__item">
+              <a class="p-footer__item-link" href="#flow">治療の流れ</a>
             </li>
-            <ul class="p-footer-info2">
-              <li class="c-footer-list">
-                <a href="index2.html#AboutUs">当院について</a>
-              </li>
-              <li class="c-footer-list2">
-                <a href="index2.html#AboutUs">院長挨拶</a>
-              </li>
-              <li class="c-footer-list2">
-                <a href="index2.html#facility">設備紹介</a>
-              </li>
-              <li class="c-footer-list2">
-                <a href="index2.html#overview">会社概要</a>
-              </li>
-            </ul>
-
-            <li class="c-footer-list">
-              <a href="https://www.google.co.jp/">プライバシーポリシー</a>
+            <li class="p-footer__dd-list-container">
+              <ul class="p-footer__dd-list">
+                <li class="p-footer__item">
+                  <a class="p-footer__item-link" href="index2.html#AboutUs"
+                    >当院について</a
+                  >
+                </li>
+                <li class="p-footer__dd-item">
+                  <a class="p-footer__dd-item-link" href="index2.html#AboutUs"
+                    >院長挨拶</a
+                  >
+                </li>
+                <li class="p-footer__dd-item">
+                  <a class="p-footer__dd-item-link" href="index2.html#facility"
+                    >設備紹介</a
+                  >
+                </li>
+                <li class="p-footer__dd-item">
+                  <a class="p-footer__dd-item-link" href="index2.html#overview"
+                    >会社概要</a
+                  >
+                </li>
+              </ul>
+            </li>
+            <li class="p-footer__item">
+              <a class="p-footer__item-link" href="https://www.google.co.jp/"
+                >プライバシーポリシー</a
+              >
             </li>
           </ul>
         </div>

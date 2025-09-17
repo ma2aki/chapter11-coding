@@ -34,23 +34,91 @@
   }
 }
 
-.p-footer__info1 {
+.p-footer__list {
   @include mq(md) {
     display: flex;
     margin-left: myrem(100);
-    // margin-top: myrem(85);
     align-items: flex-start;
   }
 }
 
-.p-footer-info2 {
+.p-footer__item {
+  padding-bottom: myrem(3);
+  border-bottom: 1px solid $blue2;
+  letter-spacing: calc(40 / 1000) * myrem(14);
+  @include mq(md) {
+    padding-bottom: myrem(5);
+    font-size: myrem(16);
+    letter-spacing: calc(100 / 1000) * myrem(16);
+    margin-bottom: myrem(10);
+    white-space: nowrap;
+  }
+}
+
+.p-footer__item:nth-of-type(1) .p-footer__item-link {
+  display: block;
+  width: 100%;
+  padding-top: myrem(1);
+  @include mq(md) {
+    padding-top: 0;
+  }
+}
+.p-footer__item:nth-of-type(2) .p-footer__item-link {
+  display: block;
+  width: 100%;
+  padding-top: myrem(21);
+  @include mq(md) {
+    padding-top: 0;
+  }
+}
+.p-footer__item:nth-of-type(3) .p-footer__item-link {
+  display: block;
+  width: 100%;
+  padding-top: myrem(21);
+  @include mq(md) {
+    padding-top: 0;
+  }
+}
+.p-footer__item:nth-of-type(4) .p-footer__item-link {
+  display: block;
+  width: 100%;
+  padding-top: myrem(24);
+  @include mq(md) {
+    padding-top: 0;
+  }
+}
+
+.p-footer__item:nth-of-type(2) {
+  padding-bottom: myrem(5);
+  @include mq(md) {
+    margin-left: myrem(35);
+  }
+}
+
+.p-footer__item:nth-of-type(3) {
+  padding-bottom: myrem(5);
+  margin-bottom: myrem(18);
+  @include mq(md) {
+    margin-left: myrem(35);
+  }
+}
+
+.p-footer__item:nth-of-type(5) {
+  padding-bottom: myrem(5);
+  @include mq(md) {
+    margin-left: myrem(33);
+    padding-bottom: myrem(4);
+  }
+}
+
+.p-footer__dd-list {
   @include mq(md) {
     width: fit-content;
     margin: 0;
     margin-left: myrem(36);
   }
 }
-.p-footer-info2 li:nth-of-type(1) {
+.p-footer__dd-list li:nth-of-type(1) {
   padding-bottom: myrem(7);
   margin-bottom: myrem(13);
   @include mq(md) {
@@ -59,7 +127,7 @@
   }
 }
 
-.p-footer-info2 li:nth-of-type(2) {
+.p-footer__dd-list li:nth-of-type(2) {
   margin-bottom: myrem(15);
   @include mq(md) {
     margin-top: myrem(12);
@@ -67,7 +135,7 @@
   }
 }
 
-.p-footer-info2 li:nth-of-type(3) {
+.p-footer__dd-list li:nth-of-type(3) {
   margin-bottom: myrem(15);
   @include mq(md) {
     margin-top: myrem(9);
@@ -75,7 +143,7 @@
   }
 }
 
-.p-footer-info2 li:nth-of-type(4) {
+.p-footer__dd-list li:nth-of-type(4) {
   @include mq(md) {
     margin-top: myrem(9);
   }
@@ -92,5 +160,97 @@
     letter-spacing: calc(100 / 1000) * myrem(12);
     margin-left: 0;
     margin-top: myrem(65);
+  }
+}
+
+.p-footer__dd-item {
+  width: 91%;
+  margin: 0 auto;
+  padding-bottom: myrem(8);
+  border-bottom: 1px solid #e0e0e0;
+  font-size: myrem(14);
+  position: relative;
+  letter-spacing: calc(100 / 1000) * myrem(14);
+  @include mq(md) {
+    border: none;
+    margin-bottom: myrem(10);
+    margin-left: myrem(2);
+    padding: 0;
+    letter-spacing: calc(100 / 1000) * myrem(14);
+  }
+}
+.p-footer__dd-item-link {
+  display: block;
+  width: 100%;
+  @include mq(md) {
+    width: 120%;
+  }
+}
+
+.p-footer__dd-item:after {
+  content: "";
+  position: absolute;
+  top: 40%;
+  right: 0;
+  transform: translateY(-50%) rotate(45deg);
+  width: 7px;
+  height: 7px;
+  border-top: 1px solid $black;
+  border-right: 1px solid $black;
+  @include mq(md) {
+    top: 50%;
+    right: -3px;
+    transform: translateY(-50%) rotate(45deg);
+    width: 6px;
+    height: 6px;
+    border-top: 1px solid $black;
+    border-right: 1px solid $black;
+    pointer-events: none;
+  }
+}
+
+.p-footer__dd-item {
+  width: 91%;
+  margin: 0 auto;
+  padding-bottom: myrem(8);
+  border-bottom: 1px solid #e0e0e0;
+  font-size: myrem(14);
+  position: relative;
+  letter-spacing: calc(100 / 1000) * myrem(14);
+  @include mq(md) {
+    border: none;
+    margin-bottom: myrem(10);
+    margin-left: myrem(2);
+    padding: 0;
+    letter-spacing: calc(100 / 1000) * myrem(14);
+  }
+}
+.p-footer__dd-item-link {
+  display: block;
+  width: 100%;
+  @include mq(md) {
+    width: 120%;
+  }
+}
+
+.p-footer__dd-item:after {
+  content: "";
+  position: absolute;
+  top: 40%;
+  right: 0;
+  transform: translateY(-50%) rotate(45deg);
+  width: 7px;
+  height: 7px;
+  border-top: 1px solid $black;
+  border-right: 1px solid $black;
+  @include mq(md) {
+    top: 50%;
+    right: -3px;
+    transform: translateY(-50%) rotate(45deg);
+    width: 6px;
+    height: 6px;
+    border-top: 1px solid $black;
+    border-right: 1px solid $black;
+    pointer-events: none;
   }
 }
