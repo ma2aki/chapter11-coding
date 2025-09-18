@@ -1,8 +1,10 @@
 @use "global" as *;
 
 .p-flow__wrapper {
+  flex-wrap: wrap;
   @include mq(md) {
     display: flex;
+    flex-wrap: nowrap;
   }
 }
 

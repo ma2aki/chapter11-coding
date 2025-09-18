@@ -2,8 +2,7 @@
 
 .c-btn01 {
   font-weight: bold;
-  display: block;
-  margin-top: myrem(8);
+  display: inline-block;
   text-align: right;
   font-size: myrem(14);
   letter-spacing: calc(100 / 1000) * myrem(14);
@@ -13,7 +12,6 @@
     font-size: myrem(16);
     letter-spacing: calc(100 / 1000) * 1rem;
     transform: translateX(-30px);
-    margin-top: myrem(10);
   }
 }
 

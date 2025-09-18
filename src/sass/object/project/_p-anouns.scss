@@ -95,14 +95,13 @@
 }
 
 .p-anouns__btn {
+  text-align: right;
+  position: relative;
+  margin-top: myrem(11);
   @include mq(md) {
     margin-bottom: myrem(35);
-    margin-top: myrem(15);
+    margin-top: myrem(21);
+    margin-right: myrem(-7);
     font-size: myrem(16);
-    display: block;
-    padding: myrem(5) myrem(10);
-    padding-right: myrem(23);
-    text-align: right;
-    position: relative;
   }
 }

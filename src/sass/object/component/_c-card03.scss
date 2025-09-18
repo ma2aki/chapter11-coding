@@ -46,7 +46,7 @@
 }
 
 // 見出し文字
-.c-card03::before {
+.c-card03::after {
   content: "01";
   position: absolute;
   width: myrem(42);
@@ -85,26 +85,6 @@
   }
 }
 
-.c-card03:nth-of-type(2)::before {
-  content: "";
-  position: absolute;
-  width: 0.8125rem;
-  height: 1.5625rem;
-  background: #a4dde0;
-  -webkit-clip-path: polygon(0 0, 0 100%, 100% 50%);
-  clip-path: polygon(0 0, 0 100%, 100% 50%);
-  left: myrem(-19);
-  top: 50%;
-  transform: translateY(-50%);
-  @include mq(md) {
-    width: 1rem;
-    height: 1.8125rem;
-    top: 50%;
-    transform: translateY(-50%);
-    left: myrem(-23);
-  }
-}
-
 .c-card03:nth-of-type(2) .c-card03__text {
   margin-top: myrem(14.5);
   margin-right: myrem(3);
@@ -130,28 +110,32 @@
   }
 }
 
+.c-card03:nth-of-type(2)::before {
+  content: "";
+  position: absolute;
+  width: 0.8125rem;
+  height: 1.5625rem;
+  background: #a4dde0;
+  -webkit-clip-path: polygon(0 0, 0 100%, 100% 50%);
+  clip-path: polygon(0 0, 0 100%, 100% 50%);
+  left: myrem(-19);
+  top: 50%;
+  transform: translateY(-50%);
+  @include mq(md) {
+    width: 1rem;
+    height: 1.8125rem;
+    top: 50%;
+    transform: translateY(-50%);
+    left: myrem(-23);
+  }
+}
+
 .c-card03:nth-of-type(2)::after {
   content: "02";
-  position: absolute;
-  width: myrem(42);
-  height: 2.5625rem;
-  border-radius: 50%;
-  line-height: 2.35;
-  font-weight: bold;
-  top: 0;
   left: myrem(1);
-  background-color: #edf5f5;
-  color: $blue;
   padding-right: myrem(5);
   @include mq(md) {
-    top: myrem(-2);
-    left: 0;
-    font-size: myrem(20);
-    line-height: 2.25;
-    width: myrem(50);
-    height: myrem(50);
-    border-radius: 50%;
-    z-index: 0;
+    top: myrem(25);
     padding-right: 0;
   }
 }
@@ -170,26 +154,6 @@
     height: myrem(180);
     margin-right: 0;
     margin-left: myrem(-9.5);
-  }
-}
-
-.c-card03:nth-of-type(3)::before {
-  content: "";
-  position: absolute;
-  width: 0.8125rem;
-  height: 1.5625rem;
-  background: #a4dde0;
-  -webkit-clip-path: polygon(0 0, 0 100%, 100% 50%);
-  clip-path: polygon(0 0, 0 100%, 100% 50%);
-  left: myrem(-17);
-  top: 50%;
-  transform: translateY(-50%);
-  @include mq(md) {
-    width: 1rem;
-    height: 1.8125rem;
-    top: 50%;
-    transform: translateY(-50%);
-    left: myrem(-22);
   }
 }
 
@@ -221,28 +185,36 @@
   }
 }
 
+.c-card03:nth-of-type(3)::before {
+  content: "";
+  position: absolute;
+  width: 0.8125rem;
+  height: 1.5625rem;
+  background: #a4dde0;
+  -webkit-clip-path: polygon(0 0, 0 100%, 100% 50%);
+  clip-path: polygon(0 0, 0 100%, 100% 50%);
+  left: myrem(-17);
+  top: 50%;
+  transform: translateY(-50%);
+  @include mq(md) {
+    width: 1rem;
+    height: 1.8125rem;
+    top: 50%;
+    transform: translateY(-50%);
+    left: myrem(-22);
+  }
+}
+
 .c-card03:nth-of-type(3)::after {
   content: "03";
-  position: absolute;
-  width: myrem(44);
-  height: myrem(41);
-  border-radius: 50%;
   line-height: 2.4;
-  font-weight: bold;
   top: myrem(-1);
   left: myrem(0);
-  background-color: #edf5f5;
-  color: $blue; /* 好みで色を変えてください */
   padding-right: myrem(4);
   padding-top: myrem(1);
   @include mq(md) {
-    top: myrem(-1);
+    top: myrem(25);
     left: 0;
-    font-size: myrem(20);
-    line-height: 2.25;
-    width: myrem(50);
-    height: myrem(50);
-    z-index: 0;
     padding-right: 0;
     padding-top: 0;
   }
@@ -263,26 +235,6 @@
     border-radius: 50%;
     margin-right: 0;
     margin-left: myrem(-11);
-  }
-}
-
-.c-card03:nth-of-type(4)::before {
-  content: "";
-  position: absolute;
-  width: 0.8125rem;
-  height: 1.5625rem;
-  background: #a4dde0;
-  -webkit-clip-path: polygon(0 0, 0 100%, 100% 50%);
-  clip-path: polygon(0 0, 0 100%, 100% 50%);
-  left: myrem(-16);
-  top: 50%;
-  transform: translateY(-50%);
-  @include mq(md) {
-    width: 1rem;
-    height: 1.8125rem;
-    top: 50%;
-    transform: translateY(-50%);
-    left: myrem(-19);
   }
 }
 
@@ -315,29 +267,36 @@
   }
 }
 
+.c-card03:nth-of-type(4)::before {
+  content: "";
+  position: absolute;
+  width: 0.8125rem;
+  height: 1.5625rem;
+  background: #a4dde0;
+  -webkit-clip-path: polygon(0 0, 0 100%, 100% 50%);
+  clip-path: polygon(0 0, 0 100%, 100% 50%);
+  left: myrem(-16);
+  top: 50%;
+  transform: translateY(-50%);
+  @include mq(md) {
+    width: 1rem;
+    height: 1.8125rem;
+    top: 50%;
+    transform: translateY(-50%);
+    left: myrem(-19);
+  }
+}
+
 // 見出し文字
 .c-card03:nth-of-type(4)::after {
   content: "04";
-  position: absolute;
-  width: myrem(41);
-  height: myrem(41);
-  border-radius: 50%;
-  line-height: 2.35;
-  font-weight: bold;
   top: myrem(-1);
   left: myrem(1);
-  background-color: #edf5f5;
-  color: $blue; /* 好みで色を変えてください */
   padding-right: myrem(5);
   padding-top: myrem(1);
   @include mq(md) {
-    top: myrem(-2);
     left: 0;
-    font-size: myrem(20);
-    line-height: 2.35;
-    width: myrem(50);
-    height: myrem(50);
-    z-index: 0; /* 好みで色を変えてください */
+    top: myrem(25);
     padding-right: 0;
     padding-top: 0;
   }

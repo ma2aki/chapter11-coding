@@ -56,32 +56,38 @@ jQuery(function ($) {
 // スワイパー
 /////////////////////
 
-new Swiper(".swiper", {
-  speed: 500,
-  loop: true,
-  centeredSlides: true,
-  slidesPerView: 1.5,
-  spaceBetween: 13,
-  autoplay: {
-    delay: 2000,
-    disableOnInteraction: false,
-  },
-  navigation: {
-    nextEl: ".swiper-button-next",
-    prevEl: ".swiper-button-prev",
-  },
-  breakpoints: {
-    768: {
-      spaceBetween: -16,
-      centeredSlidesBounds: true,
-      slidesPerView: 3.5,
-    },
-  },
+document.addEventListener("DOMContentLoaded", function () {
+  // .swiper がページに存在する場合だけ初期化
+  if (document.querySelector(".swiper")) {
+    const swiper = new Swiper(".swiper", {
+      speed: 500,
+      loop: true,
+      centeredSlides: true,
+      slidesPerView: 1.5,
+      spaceBetween: 13,
+      autoplay: {
+        delay: 2000,
+        disableOnInteraction: false,
+      },
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
+      breakpoints: {
+        768: {
+          spaceBetween: -16,
+          centeredSlidesBounds: true,
+          slidesPerView: 3.5,
+        },
+      },
+    });
+
+    window.addEventListener("load", () => {
+      swiper.update(); // Swiperの再計算
+    });
+  }
 });
 
-window.addEventListener("load", () => {
-  swiper.update(); // Swiperの再計算
-});
 // ---------------
 // fadeIn-left
 // ---------------
@@ -142,7 +148,7 @@ $(function () {
   if (window.matchMedia("(max-width: 768px)").matches) {
     //画面横幅が768px以下のときの処理
     $(
-      "#js-hamburger-menu, .p-header__dd-list-link,.p-header__navigation__link,.p-header__hamburger-bg"
+      "#js-hamburger-menu, .p-header__dd-list-link,.p-header__navigation-link,.p-header__hamburger-bg"
     ).on("click", function () {
       $(
         ".p-header__hamburger ,body, .p-header__hamburger-bg, .p-header__nav, .p-header__tel, .p-header__reserve"
