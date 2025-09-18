@@ -3861,13 +3861,13 @@ button {
   }
 }
 
-.p-footer__item:nth-of-type(4) .p-footer__item-link {
+.p-footer__item:nth-of-type(5) .p-footer__item-link {
   display: block;
   width: 100%;
   padding-top: 1.5rem;
 }
 @media screen and (min-width: 768px) {
-  .p-footer__item:nth-of-type(4) .p-footer__item-link {
+  .p-footer__item:nth-of-type(5) .p-footer__item-link {
     padding-top: 0;
   }
 }
@@ -3943,7 +3943,7 @@ button {
 }
 
 @media screen and (min-width: 768px) {
-  .p-footer__dd-list li:nth-of-type(4) {
+  .p-footer__dd-list li:nth-of-type(5) {
     margin-top: 0.5625rem;
   }
 }
@@ -4899,16 +4899,6 @@ label[for=secondTimes] {
   -webkit-transition: 0.3s;
   transition: 0.3s;
 }
-body.hamburger-menu--open {
-  height: 100%;
-  overflow: hidden;
-}
-@media screen and (min-width: 768px) {
-  body.hamburger-menu--open {
-    overflow: scroll;
-  }
-}
-
 .p-header {
   position: sticky;
   top: 0;
@@ -4922,6 +4912,16 @@ body.hamburger-menu--open {
   .p-header {
     top: 0;
     height: 5.714vw;
+  }
+}
+
+body.hamburger-menu--open {
+  height: 100%;
+  overflow: hidden;
+}
+@media screen and (min-width: 768px) {
+  body.hamburger-menu--open {
+    overflow: scroll;
   }
 }
 
@@ -5471,7 +5471,7 @@ body.hamburger-menu--open {
   height: 200vh;
   overflow: visible;
   opacity: 1;
-  z-index: 3;
+  z-index: 50;
   -webkit-transition: 1s;
   transition: 1s;
 }
@@ -5539,7 +5539,7 @@ body.hamburger-menu--open {
   top: 20px;
 }
 .p-header__ddmenu {
-  display: block;
+  display: none;
 }
 @media screen and (min-width: 768px) {
   .p-header__ddmenu {
@@ -5567,8 +5567,6 @@ body.hamburger-menu--open {
 
 .show {
   display: block;
-  -webkit-transition: 0.5s;
-  transition: 0.5s;
 }
 @media screen and (min-width: 768px) {
   .show {
@@ -5579,8 +5577,6 @@ body.hamburger-menu--open {
 
 .hide {
   display: none;
-  -webkit-transition: 0.5s;
-  transition: 0.5s;
 }
 @media screen and (min-width: 768px) {
   .hide {
@@ -5600,7 +5596,6 @@ body.hamburger-menu--open {
 }
 
 .p-header__ddmenu-list {
-  display: none;
   border-bottom: none;
 }
 @media screen and (min-width: 768px) {
@@ -5769,31 +5764,45 @@ body.hamburger-menu--open {
 @media screen and (min-width: 768px) {
   .p-interior__slider {
     margin-top: 2.3125rem;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
   }
 }
 
-.swiper-slide {
-  width: 22.25rem !important;
-  margin-left: 0.3125rem;
-  margin-right: 0.3125rem; /* 左右のスライドを小さくする */
-  -webkit-transition: 0.7s;
-  transition: 0.7s; /* ゆっくり小さくさせる */
+@media screen and (min-width: 768px) {
+  .swiper-slide {
+    -webkit-transform: scale(0.85) !important;
+            transform: scale(0.85) !important;
+    -webkit-transition: 0.7s;
+    transition: 0.7s;
+    -ms-flex-negative: 0;
+        flex-shrink: 0;
+    -webkit-transition: opacity 0.3s ease;
+    transition: opacity 0.3s ease;
+  }
+}
+
+.swiper-slide-visible {
+  opacity: 1;
 }
 
 .swiper-slide img {
   height: auto;
   width: 100%;
+  aspect-ratio: 244/239;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+@media screen and (min-width: 768px) {
+  .swiper-slide img {
+    aspect-ratio: 435/423;
+  }
 }
 
-.swiper-slide-active {
-  width: 27.1875rem !important; /* 中央のスライドは小さくしない */
-  z-index: 1 !important; /* 中央のスライドを一番上にする */
+@media screen and (min-width: 768px) {
+  .swiper-slide-active {
+    -webkit-transform: scale(1) !important;
+            transform: scale(1) !important;
+    z-index: 1 !important;
+  }
 }
 
 .p-interior__arrow {
@@ -5816,65 +5825,71 @@ body.hamburger-menu--open {
     -webkit-box-pack: end;
         -ms-flex-pack: end;
             justify-content: flex-end;
-    margin: 10px 0 0;
+    margin: 2.5rem 0 0;
     position: relative;
+    top: auto;
+    top: initial;
   }
 }
 
 .swiper-button-prev,
 .swiper-button-next {
   display: block;
-  width: 2.5rem;
-  height: 2.5rem;
+  width: 2.5rem !important;
+  height: 2.5rem !important;
   background: #7bd1d5;
+  opacity: 0.7;
   border-radius: 50%;
   -webkit-transition: all 0.3s ease;
   transition: all 0.3s ease;
   cursor: pointer;
   position: absolute;
+  top: -7.5rem;
+  z-index: 2;
 }
 @media screen and (min-width: 768px) {
   .swiper-button-prev,
   .swiper-button-next {
     display: block;
-    width: 3.125rem;
-    height: 3.125rem;
+    width: 3.125rem !important;
+    height: 3.125rem !important;
     background: #7bd1d5;
     border-radius: 50%;
     -webkit-transition: all 0.3s ease;
     transition: all 0.3s ease;
     cursor: pointer;
-    position: relative;
+    position: absolute;
+    top: auto;
+    top: initial;
   }
 }
 
 .swiper-button-prev {
-  top: -8.625rem;
   -webkit-transform: rotate(180deg);
           transform: rotate(180deg);
+  left: auto;
+  left: initial;
 }
 @media screen and (min-width: 768px) {
   .swiper-button-prev {
     -webkit-transform: rotate(180deg);
             transform: rotate(180deg);
-    margin-right: 10px;
+    right: 5rem;
     top: auto;
     top: initial;
-    left: auto;
-    left: initial;
   }
 }
 
 .swiper-button-next {
+  left: auto;
+  left: initial;
   right: 0;
-  top: -8.625rem;
 }
 @media screen and (min-width: 768px) {
   .swiper-button-next {
     top: auto;
     top: initial;
-    right: auto;
-    right: initial;
+    right: 1.875rem;
   }
 }
 
@@ -5930,7 +5945,6 @@ body.hamburger-menu--open {
     content: "";
     width: 0.125rem;
     height: 0.90625rem;
-    top: 0.4375rem;
     bottom: 0;
     left: 0.625rem;
     right: 0;
@@ -5961,7 +5975,6 @@ body.hamburger-menu--open {
     content: "";
     width: 0.125rem;
     height: 0.90625rem;
-    top: -0.5rem;
     bottom: 0;
     left: 0.625rem;
     right: 0;
@@ -5994,8 +6007,8 @@ body.hamburger-menu--open {
     height: 0.90625rem;
     top: 0.625rem;
     bottom: 0;
-    left: 0.625rem;
     right: 0;
+    left: 0.625rem;
     margin: auto 0.9375rem;
     -webkit-transform: rotate(45deg);
             transform: rotate(45deg);

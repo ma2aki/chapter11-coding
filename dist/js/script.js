@@ -56,25 +56,26 @@ jQuery(function ($) {
 // スワイパー
 /////////////////////
 
-const swiper = new Swiper(".swiper", {
-  centeredSlides: true, // 1枚目のスライドを中央にする
-  loop: true, // ループさせる
-  speed: 500, // 少しゆっくり(デフォルトは300)
-  slidesPerView: "auto", // スライドの表示枚数
+new Swiper(".swiper", {
+  speed: 500,
+  loop: true,
+  centeredSlides: true,
+  slidesPerView: 1.5,
+  spaceBetween: 13,
   autoplay: {
-    // 自動再生
-    delay: 3000, // 3秒後に次のスライド
-    disableOnInteraction: false, // 矢印をクリックしても自動再生を止めない
+    delay: 2000,
+    disableOnInteraction: false,
   },
-  // ページネーション
-  pagination: {
-    el: ".swiper-pagination",
-    clickable: true,
-  },
-  // 前後の矢印
   navigation: {
     nextEl: ".swiper-button-next",
     prevEl: ".swiper-button-prev",
+  },
+  breakpoints: {
+    768: {
+      spaceBetween: -16,
+      centeredSlidesBounds: true,
+      slidesPerView: 3.5,
+    },
   },
 });
 
@@ -176,30 +177,26 @@ options.forEach((option) => {
 
 $(function () {
   const cardLink = $(".last-link");
+  const mediaQuery = window.matchMedia("(max-width: 768px)");
 
-  function dropdownMenu() {
-    if (window.matchMedia("(max-width: 768px)").matches) {
+  function setupDropdown(e) {
+    if (e.matches) {
+      // スマホ：アコーディオン
       cardLink.off("click").on("click", function (e) {
         e.preventDefault();
         $(this).toggleClass("active");
-        $(this).siblings(".p-header__ddmenu").slideToggle();
-        $(".p-header__ddmenu-list").toggleClass("active");
-        $(".p-header__header-ddmenu").toggleClass("show");
+        $(this).siblings(".p-header__ddmenu").stop(true, true).slideToggle(500);
       });
     } else {
-      cardLink.off("click"); // PCサイズではクリックイベントを解除！
-      $(".p-header__header-ddmenu").removeAttr("style"); // スマホ時のslideToggleでついたstyleをリセット
-      cardLink.removeClass("active"); // アクティブクラスもリセット
+      // PC：ドロップダウン
+      cardLink.off("click");
+      $(".p-header__ddmenu").removeAttr("style").removeClass("show");
+      cardLink.removeClass("active");
     }
   }
 
-  // ページロード時に実行
-  dropdownMenu();
-
-  // 画面サイズ変更にも対応
-  $(window).resize(function () {
-    dropdownMenu();
-  });
+  setupDropdown(mediaQuery);
+  mediaQuery.addEventListener("change", setupDropdown);
 });
 
 // 追従バナー

@@ -1,13 +1,5 @@
 @use "global" as *;
 
-body.hamburger-menu--open {
-  height: 100%;
-  overflow: hidden;
-  @include mq(md) {
-    overflow: scroll;
-  }
-}
-
 .p-header {
   position: sticky;
   top: 0;
@@ -19,6 +11,14 @@ body.hamburger-menu--open {
   @include mq(md) {
     top: 0;
     height: 5.714vw;
+  }
+}
+
+body.hamburger-menu--open {
+  height: 100%;
+  overflow: hidden;
+  @include mq(md) {
+    overflow: scroll;
   }
 }
 
@@ -460,7 +460,7 @@ body.hamburger-menu--open {
   height: 200vh;
   overflow: visible;
   opacity: 1;
-  z-index: 3;
+  z-index: 50;
   transition: 1s;
   @include mq(md) {
     display: none;
@@ -519,7 +519,7 @@ body.hamburger-menu--open {
 }
 
 .p-header__ddmenu {
-  display: block;
+  display: none;
   @include mq(md) {
     display: initial;
     padding-top: 0;
@@ -543,7 +543,6 @@ body.hamburger-menu--open {
 
 .show {
   display: block;
-  transition: 0.5s;
   @include mq(md) {
     display: initial;
   }
@@ -551,7 +550,6 @@ body.hamburger-menu--open {
 
 .hide {
   display: none;
-  transition: 0.5s;
   @include mq(md) {
     display: initial;
   }
@@ -567,7 +565,6 @@ body.hamburger-menu--open {
 }
 
 .p-header__ddmenu-list {
-  display: none;
   border-bottom: none;
   @include mq(md) {
     display: block;

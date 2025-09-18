@@ -29,25 +29,35 @@
   margin-top: myrem(26);
   @include mq(md) {
     margin-top: myrem(37);
-    display: flex;
-    align-items: center;
   }
 }
 
 .swiper-slide {
-  width: myrem(356) !important;
-  margin-left: myrem(5);
-  margin-right: myrem(5); /* 左右のスライドを小さくする */
-  transition: 0.7s; /* ゆっくり小さくさせる */
+  @include mq(md) {
+    transform: scale(0.85) !important;
+    transition: 0.7s;
+    flex-shrink: 0;
+    transition: opacity 0.3s ease;
+  }
+}
+.swiper-slide-visible {
+  opacity: 1;
 }
 
 .swiper-slide img {
   height: auto;
   width: 100%;
+  aspect-ratio: 244 / 239;
+  object-fit: cover;
+  @include mq(md) {
+    aspect-ratio: 435 / 423;
+  }
 }
 .swiper-slide-active {
-  width: myrem(435) !important; /* 中央のスライドは小さくしない */
-  z-index: 1 !important; /* 中央のスライドを一番上にする */
+  @include mq(md) {
+    transform: scale(1) !important;
+    z-index: 1 !important;
+  }
 }
 
 .p-interior__arrow {
@@ -58,50 +68,54 @@
     display: flex;
     align-items: center;
     justify-content: flex-end;
-    margin: 10px 0 0;
+    margin: myrem(40) 0 0;
     position: relative;
+    top: initial;
   }
 }
 
 .swiper-button-prev,
 .swiper-button-next {
   display: block;
-  width: myrem(40);
-  height: myrem(40);
+  width: myrem(40) !important;
+  height: myrem(40) !important;
   background: #7bd1d5;
+  opacity: 0.7;
   border-radius: 50%;
   transition: all 0.3s ease;
   cursor: pointer;
   position: absolute;
+  top: myrem(-120);
+  z-index: 2;
   @include mq(md) {
     display: block;
-    width: myrem(50);
-    height: myrem(50);
+    width: myrem(50) !important;
+    height: myrem(50) !important;
     background: $blue;
     border-radius: 50%;
     transition: all 0.3s ease;
     cursor: pointer;
-    position: relative;
+    position: absolute;
+    top: initial;
   }
 }
 
 .swiper-button-prev {
-  top: myrem(-138);
   transform: rotate(180deg);
+  left: initial;
   @include mq(md) {
     transform: rotate(180deg);
-    margin-right: 10px;
+    right: myrem(80);
     top: initial;
-    left: initial;
   }
 }
 
 .swiper-button-next {
+  left: initial;
   right: 0;
-  top: myrem(-138);
   @include mq(md) {
     top: initial;
-    right: initial;
+    right: myrem(30);
   }
 }
 
@@ -149,7 +163,6 @@
     content: "";
     width: myrem(2);
     height: myrem(14.5);
-    top: myrem(7);
     bottom: 0;
     left: myrem(10);
     right: 0;
@@ -176,7 +189,6 @@
     content: "";
     width: myrem(2);
     height: myrem(14.5);
-    top: myrem(-8);
     bottom: 0;
     left: myrem(10);
     right: 0;
@@ -205,8 +217,8 @@
     height: myrem(14.5);
     top: myrem(10);
     bottom: 0;
-    left: myrem(10);
     right: 0;
+    left: myrem(10);
     margin: auto myrem(15);
     transform: rotate(45deg);
   }
