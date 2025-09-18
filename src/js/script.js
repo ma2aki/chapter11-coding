@@ -53,38 +53,34 @@ jQuery(function ($) {
 });
 
 /////////////////////
-// カルーセル
+// スワイパー
 /////////////////////
 
-$(document).ready(function () {
-  $(".p-interior__slider").slick({
-    centerMode: true,
-    centerPadding: "0px", // 必ず0にする（ズレ防止）
-    slidesToShow: 3,
-    variableWidth: true, // 幅を可変に
-    arrows: true,
-    autoplay: true,
-    autoplaySpeed: 3000,
-    appendArrows: $(".p-interior__arrow"),
-    prevArrow: '<div class="slide-arrow prev-arrow"></div>',
-    nextArrow: '<div class="slide-arrow next-arrow"></div>',
-    responsive: [
-      {
-        breakpoint: 768,
-        settings: {
-          arrows: true,
-          centerMode: true,
-          centerPadding: "20px", // スマホ時に少し余白を加える
-          slidesToShow: 1, // スマホ時に1枚表示
-          appendArrows: $(".p-interior__arrow"),
-          prevArrow: '<div class="slide-arrow prev-arrow"></div>',
-          nextArrow: '<div class="slide-arrow next-arrow"></div>',
-        },
-      },
-    ],
-  });
+const swiper = new Swiper(".swiper", {
+  centeredSlides: true, // 1枚目のスライドを中央にする
+  loop: true, // ループさせる
+  speed: 500, // 少しゆっくり(デフォルトは300)
+  slidesPerView: "auto", // スライドの表示枚数
+  autoplay: {
+    // 自動再生
+    delay: 3000, // 3秒後に次のスライド
+    disableOnInteraction: false, // 矢印をクリックしても自動再生を止めない
+  },
+  // ページネーション
+  pagination: {
+    el: ".swiper-pagination",
+    clickable: true,
+  },
+  // 前後の矢印
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
+  },
 });
 
+window.addEventListener("load", () => {
+  swiper.update(); // Swiperの再計算
+});
 // ---------------
 // fadeIn-left
 // ---------------
@@ -144,14 +140,13 @@ $(window).on("load scroll", function () {
 $(function () {
   if (window.matchMedia("(max-width: 768px)").matches) {
     //画面横幅が768px以下のときの処理
-    $("#js-hamburger-menu, .p-header__dd-list-link,.p-header__navigation__link,.p-header__hamburger-bg").on(
-      "click",
-      function () {
-        $(
-          ".p-header__hamburger ,body, .p-header__hamburger-bg, .p-header__nav, .p-header__tel, .p-header__reserve"
-        ).toggleClass("p-header__hamburger-menu--open");
-      }
-    );
+    $(
+      "#js-hamburger-menu, .p-header__dd-list-link,.p-header__navigation__link,.p-header__hamburger-bg"
+    ).on("click", function () {
+      $(
+        ".p-header__hamburger ,body, .p-header__hamburger-bg, .p-header__nav, .p-header__tel, .p-header__reserve"
+      ).toggleClass("p-header__hamburger-menu--open");
+    });
   } else {
     //画面横幅が769px以上のときの処理
     // 何も実行しない

@@ -29,28 +29,25 @@
   margin-top: myrem(26);
   @include mq(md) {
     margin-top: myrem(37);
-    height: myrem(423);
-    display: none;
+    display: flex;
     align-items: center;
   }
 }
 
-.p-interior__slider.slick-initialized {
-  @include mq(md) {
-    visibility: block;
-  }
+.swiper-slide {
+  width: myrem(356) !important;
+  margin-left: myrem(5);
+  margin-right: myrem(5); /* 左右のスライドを小さくする */
+  transition: 0.7s; /* ゆっくり小さくさせる */
 }
 
-.slick-track {
-  @include mq(md) {
-    position: relative;
-    top: 0;
-    left: 0;
-    display: flex !important;
-    align-items: center;
-    margin-left: auto;
-    margin-right: auto;
-  }
+.swiper-slide img {
+  height: auto;
+  width: 100%;
+}
+.swiper-slide-active {
+  width: myrem(435) !important; /* 中央のスライドは小さくしない */
+  z-index: 1 !important; /* 中央のスライドを一番上にする */
 }
 
 .p-interior__arrow {
@@ -66,8 +63,8 @@
   }
 }
 
-.prev-arrow,
-.next-arrow {
+.swiper-button-prev,
+.swiper-button-next {
   display: block;
   width: myrem(40);
   height: myrem(40);
@@ -88,7 +85,7 @@
   }
 }
 
-.prev-arrow {
+.swiper-button-prev {
   top: myrem(-138);
   transform: rotate(180deg);
   @include mq(md) {
@@ -99,7 +96,7 @@
   }
 }
 
-.next-arrow {
+.swiper-button-next {
   right: 0;
   top: myrem(-138);
   @include mq(md) {
@@ -108,7 +105,7 @@
   }
 }
 
-.prev-arrow::before {
+.swiper-button-prev::before {
   position: absolute;
   content: "";
   width: myrem(2);
@@ -134,7 +131,7 @@
     transform: rotate(135deg);
   }
 }
-.prev-arrow::after {
+.swiper-button-prev::after {
   position: absolute;
   content: "";
   width: myrem(2);
@@ -161,7 +158,7 @@
   }
 }
 
-.next-arrow::before {
+.swiper-button-next::before {
   position: absolute;
   content: "";
   width: myrem(2);
@@ -188,7 +185,7 @@
   }
 }
 
-.next-arrow::after {
+.swiper-button-next::after {
   position: absolute;
   content: "";
   width: myrem(2);

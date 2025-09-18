@@ -2235,71 +2235,6 @@ button {
 .c-section-title--letterspacing {
   letter-spacing: 0.07rem;
 }
-.c-slider-img {
-  width: 15.25rem;
-  height: 14.9375rem;
-  margin-left: 0.3125rem;
-  margin-right: 0.5rem;
-}
-@media screen and (min-width: 768px) {
-  .c-slider-img {
-    width: 22.25rem;
-    height: 21.625rem;
-    -webkit-transition: all 0.3s ease;
-    transition: all 0.3s ease;
-  }
-}
-
-.c-slider-img img {
-  border-radius: 20px;
-  width: 100%;
-  height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
-}
-
-@media screen and (min-width: 768px) {
-  .slick-center {
-    width: 27.1875rem !important;
-    height: 26.4375rem !important;
-    z-index: 2;
-  }
-}
-
-@media screen and (min-width: 768px) {
-  .slick-center img {
-    width: 100%;
-    height: 100%;
-    -webkit-transition: all 0.1s;
-    transition: all 0.1s;
-    -o-object-fit: cover;
-       object-fit: cover;
-  }
-}
-
-@media screen and (min-width: 768px) {
-  .slick-track {
-    display: -webkit-box !important;
-    display: -ms-flexbox !important;
-    display: flex !important;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-  }
-}
-
-@media screen and (min-width: 768px) {
-  .slick-slide {
-    margin: 0 0.625rem;
-  }
-}
-
-@media screen and (min-width: 768px) {
-  .slick-list {
-    margin: 0 -10px;
-  }
-}
-
 @media screen and (min-width: 768px) {
   .p-About__wrapper {
     display: -webkit-box;
@@ -5834,34 +5769,31 @@ body.hamburger-menu--open {
 @media screen and (min-width: 768px) {
   .p-interior__slider {
     margin-top: 2.3125rem;
-    height: 26.4375rem;
-    display: none;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
   }
 }
 
-@media screen and (min-width: 768px) {
-  .p-interior__slider.slick-initialized {
-    visibility: block;
-  }
+.swiper-slide {
+  width: 22.25rem !important;
+  margin-left: 0.3125rem;
+  margin-right: 0.3125rem; /* 左右のスライドを小さくする */
+  -webkit-transition: 0.7s;
+  transition: 0.7s; /* ゆっくり小さくさせる */
 }
 
-@media screen and (min-width: 768px) {
-  .slick-track {
-    position: relative;
-    top: 0;
-    left: 0;
-    display: -webkit-box !important;
-    display: -ms-flexbox !important;
-    display: flex !important;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    margin-left: auto;
-    margin-right: auto;
-  }
+.swiper-slide img {
+  height: auto;
+  width: 100%;
+}
+
+.swiper-slide-active {
+  width: 27.1875rem !important; /* 中央のスライドは小さくしない */
+  z-index: 1 !important; /* 中央のスライドを一番上にする */
 }
 
 .p-interior__arrow {
@@ -5889,8 +5821,8 @@ body.hamburger-menu--open {
   }
 }
 
-.prev-arrow,
-.next-arrow {
+.swiper-button-prev,
+.swiper-button-next {
   display: block;
   width: 2.5rem;
   height: 2.5rem;
@@ -5902,8 +5834,8 @@ body.hamburger-menu--open {
   position: absolute;
 }
 @media screen and (min-width: 768px) {
-  .prev-arrow,
-  .next-arrow {
+  .swiper-button-prev,
+  .swiper-button-next {
     display: block;
     width: 3.125rem;
     height: 3.125rem;
@@ -5916,13 +5848,13 @@ body.hamburger-menu--open {
   }
 }
 
-.prev-arrow {
+.swiper-button-prev {
   top: -8.625rem;
   -webkit-transform: rotate(180deg);
           transform: rotate(180deg);
 }
 @media screen and (min-width: 768px) {
-  .prev-arrow {
+  .swiper-button-prev {
     -webkit-transform: rotate(180deg);
             transform: rotate(180deg);
     margin-right: 10px;
@@ -5933,12 +5865,12 @@ body.hamburger-menu--open {
   }
 }
 
-.next-arrow {
+.swiper-button-next {
   right: 0;
   top: -8.625rem;
 }
 @media screen and (min-width: 768px) {
-  .next-arrow {
+  .swiper-button-next {
     top: auto;
     top: initial;
     right: auto;
@@ -5946,7 +5878,7 @@ body.hamburger-menu--open {
   }
 }
 
-.prev-arrow::before {
+.swiper-button-prev::before {
   position: absolute;
   content: "";
   width: 0.125rem;
@@ -5962,7 +5894,7 @@ body.hamburger-menu--open {
   border-radius: 50px;
 }
 @media screen and (min-width: 768px) {
-  .prev-arrow::before {
+  .swiper-button-prev::before {
     position: absolute;
     content: "";
     width: 0.125rem;
@@ -5977,7 +5909,7 @@ body.hamburger-menu--open {
   }
 }
 
-.prev-arrow::after {
+.swiper-button-prev::after {
   position: absolute;
   content: "";
   width: 0.125rem;
@@ -5993,7 +5925,7 @@ body.hamburger-menu--open {
   border-radius: 50px;
 }
 @media screen and (min-width: 768px) {
-  .prev-arrow::after {
+  .swiper-button-prev::after {
     position: absolute;
     content: "";
     width: 0.125rem;
@@ -6008,7 +5940,7 @@ body.hamburger-menu--open {
   }
 }
 
-.next-arrow::before {
+.swiper-button-next::before {
   position: absolute;
   content: "";
   width: 0.125rem;
@@ -6024,7 +5956,7 @@ body.hamburger-menu--open {
   border-radius: 50px;
 }
 @media screen and (min-width: 768px) {
-  .next-arrow::before {
+  .swiper-button-next::before {
     position: absolute;
     content: "";
     width: 0.125rem;
@@ -6039,7 +5971,7 @@ body.hamburger-menu--open {
   }
 }
 
-.next-arrow::after {
+.swiper-button-next::after {
   position: absolute;
   content: "";
   width: 0.125rem;
@@ -6055,7 +5987,7 @@ body.hamburger-menu--open {
   border-radius: 50px;
 }
 @media screen and (min-width: 768px) {
-  .next-arrow::after {
+  .swiper-button-next::after {
     position: absolute;
     content: "";
     width: 0.125rem;

@@ -44,8 +44,7 @@
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <link
       rel="stylesheet"
-      type="text/css"
-      href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"
+      href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css"
     />
     <script defer src="./js/script.min.js"></script>
   </head>
@@ -514,40 +513,48 @@
             Dental clinic interior
           </p>
         </div>
-        <div class="p-interior__slider">
-          <div class="c-slider-img">
-            <img
-              src="images/院内風景/院内風景1.webp"
-              alt="歯科医院受付場所風景"
-            />
-          </div>
-          <div class="c-slider-img">
-            <img src="images/院内風景/院内風景2.webp" alt="院長治療風景" />
-          </div>
-          <div class="c-slider-img">
-            <img src="images/院内風景/院内風景3.webp" alt="歯が綺麗な女性" />
-          </div>
-          <div class="c-slider-img">
-            <img src="images/院内風景/院内風景4.webp" alt="治療椅子" />
-          </div>
-          <div class="c-slider-img">
-            <img
-              src="images/院内風景/院内風景5.webp"
-              alt="歯科指導する歯科衛生士1"
-            />
-          </div>
-          <div class="c-slider-img">
-            <img src="images/院内風景/院内風景6.webp" alt="歯の模型" />
-          </div>
-          <div class="c-slider-img">
-            <img
-              src="images/院内風景/院内風景7.webp"
-              alt="歯科指導する歯科衛生士２"
-            />
+        <div class="p-interior__slider swiper">
+          <!-- Additional required wrapper -->
+          <div class="p-interior__swiper-wrapper swiper-wrapper">
+            <!-- Slides -->
+            <div class="p-interior__slide swiper-slide">
+              <img
+                src="images/院内風景/院内風景1.webp"
+                alt="歯科医院受付場所風景"
+              />
+            </div>
+            <div class="p-interior__slide swiper-slide">
+              <img src="images/院内風景/院内風景2.webp" alt="院長治療風景" />
+            </div>
+            <div class="p-interior__slide swiper-slide">
+              <img src="images/院内風景/院内風景3.webp" alt="歯が綺麗な女性" />
+            </div>
+            <div class="p-interior__slide swiper-slide">
+              <img src="images/院内風景/院内風景4.webp" alt="治療椅子" />
+            </div>
+            <div class="p-interior__slide swiper-slide">
+              <img
+                src="images/院内風景/院内風景5.webp"
+                alt="歯科指導する歯科衛生士1"
+              />
+            </div>
+            <div class="p-interior__slide swiper-slide">
+              <img src="images/院内風景/院内風景6.webp" alt="歯の模型" />
+            </div>
+            <div class="p-interior__slide swiper-slide">
+              <img
+                src="images/院内風景/院内風景7.webp"
+                alt="歯科指導する歯科衛生士２"
+              />
+            </div>
           </div>
         </div>
-        <div class="l-inner">
-          <div class="p-interior__arrow"></div>
+        <div class="p-interior__inner l-inner">
+          <!-- If we need navigation buttons -->
+          <div class="p-interior__arrow">
+            <div class="p-interior__arrow-prev swiper-button-prev"></div>
+            <div class="p-interior__arrow-next swiper-button-next"></div>
+          </div>
         </div>
       </section>
 
@@ -738,10 +745,7 @@
       </p>
     </footer>
 
-    <script
-      type="text/javascript"
-      src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"
-    ></script>
+    <script src="https://unpkg.com/swiper@11/swiper-bundle.min.js"></script>
     <script src="js/jquery.inview.min.js"></script>
   </body>
 </html>
