@@ -193,7 +193,7 @@ button {
   top: 0rem;
   margin-top: -15.3125rem;
   padding-top: 15.875rem;
-  background-image: url("../images/新着情報背景.webp");
+  background-image: url("../images/新着情報-bg.webp");
   position: relative;
   z-index: 0;
   background-size: cover;
@@ -3511,7 +3511,7 @@ button {
 .p-facility__box::after {
   content: "";
   display: block;
-  background-image: url(../../images/AboutUs背景.webp);
+  background-image: url("../images/AboutUs-bg.webp");
   background-size: cover;
   width: 100%;
   height: 100%;
